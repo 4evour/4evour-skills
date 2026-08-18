@@ -1,0 +1,8 @@
+interface:
+  display_name: "归藏社交卡片制作"
+  short_description: "确定性制作社交卡片、Live Photo 和公众号封面"
+  brand_color: "#002FA7"
+  default_prompt: "使用 $guizang-social-card-skill，把这篇文章、卡片脚本或视频素材制作成排版准确的 3:4 社交卡片、Live Photo 或微信公众号封面对。"
+
+policy:
+  allow_implicit_invocation: true

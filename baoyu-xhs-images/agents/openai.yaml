@@ -1,0 +1,4 @@
+interface:
+  display_name: "宝玉社交插画卡片"
+  short_description: "生成手绘概念图、关系图和风格统一的社交插画组图"
+  default_prompt: "使用 $baoyu-xhs-images，把这份已审核的卡片脚本生成低文字量、风格统一的概念图或手绘知识卡，并保存每页提示词。"

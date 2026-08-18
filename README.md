@@ -1,58 +1,90 @@
 # 4evour Skills
 
-这是我在 ai coding 的过程中，逐步沉淀下来的个人 Skills 仓库。
+这是我在 AI Coding、开源项目研究和技术内容生产过程中持续维护的 Codex Skills 仓库。
 
-这里收录的不是临时提示词，而是经过实际任务验证、反馈迭代和质量门约束的可复用工作流。
-每个 Skill 都尽量把个人判断习惯、研究方法和交付标准固化下来，让相似任务可以稳定复现，而不是每次从头摸索。
+仓库把完整工作流拆成独立阶段：技术研究只负责证据，专业写作只负责论证，社交适配只负责平台表达，视觉制作再根据内容类型选择确定性排版或生成式插画。阶段之间通过 Markdown 研究包和 claim ledger 交接，不依赖一段越来越长的对话上下文。
+
+## 内容生产链
+
+```text
+research-open-source-project
+        ↓
+write-professional-technical-article
+        ↓
+adapt-social-content
+        ↓
+├── guizang-social-card-skill  精确文字、源码、截图、封面和成套卡片
+└── baoyu-xhs-images           低文字量概念图、关系图和手绘插画
+```
 
 ## 当前包含
 
-### research-open-source-project
+| Skill | 职责 | 推荐使用场景 |
+|---|---|---|
+| `research-open-source-project` | 从源码、测试和官方资料产出可复核研究包 | 开源项目、Agent 系统、架构和竞品调研 |
+| `write-professional-technical-article` | 把研究包写成有论点、有证据、有边界的中文技术长文 | 系统设计、工程实践、论文和技术路线文章 |
+| `adapt-social-content` | 把审核后的文章改写成平台内容和卡片脚本 | 微信公众号、小红书、X、知乎和视频脚本 |
+| `guizang-social-card-skill` | 使用 HTML/CSS 和真实素材确定性渲染 | 源码、命令、截图、微信封面、Live Photo、Swiss/杂志风卡片 |
+| `baoyu-xhs-images` | 使用 ImageGen 生成风格统一的插画卡片 | 手绘概念图、关系图、流程图和低文字量知识卡 |
 
-面向开源项目的深度研究与内容生产工作流。它不会停留在 README 摘要，而会进一步检查源码、测试、架构和竞品资料，形成独立技术判断，并按需产出：
+## 图片路由
 
-- 有源码证据的技术文章母稿
-- 项目创新点、设计思路与工程权衡分析
-- 公平的竞品定位和适用边界
-- 微信公众号或博客长文
-- 小红书专业技术图文与发布文案
-- 插图报告或 PDF 母稿
-- 生图前脚本、事实约束和成品质量检查
-
-支持 `reviewed` 审核模式和 `one-pass` 一键模式。
-
-## 使用方式
-
-将需要的 Skill 文件夹复制到 Codex 个人 Skill 目录：
-
-```powershell
-Copy-Item -Recurse .\research-open-source-project "$env:USERPROFILE\.codex\skills\"
-```
-
-然后在 Codex 中直接调用：
+`adapt-social-content` 为每一页分配一种渲染模式：
 
 ```text
-使用 $research-open-source-project 的 one-pass 模式，研究这个开源项目，并产出技术文章、平台文案和经过质量检查的图解方案。
+reuse-evidence          → guizang-social-card-skill
+deterministic-evidence  → guizang-social-card-skill
+generated-relationship  → baoyu-xhs-images
 ```
 
-## 设计原则
+如果关系页仍然包含较多必须逐字准确的中文、代码或数字，也交给 `guizang-social-card-skill`，不要交给图片模型排字。
 
-- README 是重要的一手资料，但不是研究终点。
-- 事实、推断、观点和待验证问题必须分开。
-- 先形成文章母稿，再适配不同发布渠道。
-- 社交卡片要解释关系和机制，不能只堆关键词。
-- 生成式图片中的数字、版本和标签必须可追溯。
-- 一键执行可以减少偏好确认，但不能跳过证据和质量检查。
+## 安装到 Codex
+
+克隆仓库后，在 PowerShell 中运行：
+
+```powershell
+$skillRoot = Join-Path $env:USERPROFILE '.codex\skills'
+$skills = @(
+  'research-open-source-project',
+  'write-professional-technical-article',
+  'adapt-social-content',
+  'guizang-social-card-skill',
+  'baoyu-xhs-images'
+)
+
+foreach ($skill in $skills) {
+  Copy-Item -Recurse -Force ".\$skill" $skillRoot
+}
+```
+
+安装或更新后，在下一轮 Codex 对话中即可通过名称调用。例如：
+
+```text
+使用 $research-open-source-project 研究这个 Agent Memory 项目并产出研究包。
+使用 $write-professional-technical-article 基于研究包写一篇专业中文技术文章。
+使用 $adapt-social-content 将已审核文章改写成小红书内容和卡片脚本。
+```
+
+`guizang-social-card-skill` 首次在独立环境运行时，需要在其目录执行 `npm install` 安装 Playwright 依赖。不要提交 `node_modules`、生成图片或本地测试目录。
 
 ## 目录结构
 
 ```text
 4evour-skills/
-└── research-open-source-project/
-    ├── SKILL.md
-    ├── agents/
-    ├── references/
-    └── scripts/
+├── research-open-source-project/
+├── write-professional-technical-article/
+├── adapt-social-content/
+├── guizang-social-card-skill/
+└── baoyu-xhs-images/
 ```
 
-后续会继续沉淀在实际任务中反复使用并验证过的个人工作流。
+每个 Skill 使用 `SKILL.md` 描述触发条件和核心流程；详细方法放入 `references/`，确定性工具放入 `scripts/`，输出模板和视觉资产放入 `assets/`。
+
+## 上游与许可证
+
+- `baoyu-xhs-images` 基于 [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills) 的同名 Skill，按 MIT License 使用和修改；仓库内保留许可证。
+- `guizang-social-card-skill` 基于 [op7418/guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill)，按 AGPL-3.0 使用和修改；仓库内保留许可证与商业授权说明。
+- 其余三个内容工作流为本仓库维护的中文 Skills。
+
+本仓库只收录运行所需的 Skill 文件，不包含上游仓库的 `.git`、`node_modules`、本地测试产物和生成内容。

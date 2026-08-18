@@ -1,0 +1,4 @@
+interface:
+  display_name: "专业技术文章写作"
+  short_description: "把技术研究包写成有论点、有证据、有边界的中文长文"
+  default_prompt: "使用 $write-professional-technical-article，读取这份技术研究包，先明确文章目的和论证地图，再写出可发布的专业技术文章。"

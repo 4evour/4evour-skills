@@ -1,4 +1,4 @@
 interface:
   display_name: "开源项目深度研究"
-  short_description: "从源码证据一键产出独立技术文章、平台文案与可验收图解"
-  default_prompt: "使用 $research-open-source-project 从源码研究这个开源仓库，并一键产出专业技术文章、平台适配文案和经过质量检查的图解方案。"
+  short_description: "从源码和官方资料产出可复核的技术研究包"
+  default_prompt: "使用 $research-open-source-project 深入研究这个开源仓库或技术系统，追踪源码链路、记录证据、分析权衡，并产出可交给文章 skill 的研究包。"
