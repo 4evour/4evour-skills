@@ -1,161 +1,96 @@
-# 调研产物模板
+# 研究产物模板
 
-## 目录
-
-1. 源码状态
-2. 中心论点
-3. 论断账本
-4. 文章元数据
-5. 写作人设
+文件名和表头保留稳定英文，便于校验脚本和下游 skill 交接；正文内容使用中文。
 
 ## 1. source-state.md
 
 ```markdown
-# 源码状态
+# Source State
 
-- 仓库：
-- 本地路径：
-- 远程 URL：
-- 分支/标签：
-- 提交：
-- 调研日期：
-- 主要语言：
-- 目标读者：
-- 目标产物：
-- 已检查的官方文档：
-- 已检查的竞品：
+- Repository:
+- Local path:
+- Remote URL:
+- Branch/tag:
+- Commit:
+- Research date:
+- Primary language:
+- Requested audience:
+- Research question:
+- Explicit non-goals:
+- Official docs inspected:
+- Competitors inspected:
 ```
 
 ## 2. thesis.md
 
-严格使用以下标题：
-
 ```markdown
-# 中心论点
+# Thesis
 
-## 核心判断
+## Central Thesis
 
-一句可证伪且有决策价值的话。
+一个可证伪、有工程意义的句子。
 
-## 常见误读
+## Common Misreading
 
 一个合理但不完整的理解。
 
-## 支撑证据
+## Supporting Evidence
 
-1. 代码或运行时证据。
-2. 代码或运行时证据。
-3. 架构、测试或竞品证据。
+1. 源码或运行证据。
+2. 源码或运行证据。
+3. 架构、测试或比较证据。
 
-## 最强反方观点
+## Counterargument
 
-最有力且公平的反对意见。
+最强的公平反对意见。
 
-## 成立条件
+## Conditions
 
-论点在哪些场景成立，在哪些场景不成立。
+论点成立和不成立的条件。
 
-## 尚未证明
+## Unproven
 
-当前证据无法建立的内容。
+当前证据无法证明的内容。
 ```
 
 ## 3. claim-ledger.md
 
-严格使用以下表头：
-
 ```markdown
-# 论断账本
+# Claim Ledger
 
-| ID | 类型 | 论断 | 证据 | 置信度 | 文章位置 |
+| ID | Type | Claim | Evidence | Confidence | Article Location |
 |---|---|---|---|---|---|
-| C-001 | FACT | ... | `path/file.ts` | high | 第 2 节 |
-| C-002 | INFERENCE | ... | C-001 + C-004 | medium | 中心论点 |
-| C-003 | OPINION | ... | 已声明的判断标准 | medium | 结论 |
-| C-004 | OPEN | ... | 缺少公开证据 | low | 限制 |
+| C-001 | FACT | ... | `path/file.ts` | high | Section 2 |
+| C-002 | INFERENCE | ... | C-001 + C-004 | medium | Thesis |
+| C-003 | OPINION | ... | stated criteria | medium | Conclusion |
+| C-004 | OPEN | ... | missing public evidence | low | Limitations |
 ```
 
 规则：
 
-- `类型` 只能是 `FACT`、`INFERENCE`、`OPINION` 或 `OPEN`。
-- `FACT` 的证据不能为空。
-- 不能只引用论断账本中的另一条记录来证明新的 `FACT`。
-- 对不稳定的外部论断添加 URL 和访问日期。
+- `Type` 只能是 `FACT`、`INFERENCE`、`OPINION` 或 `OPEN`；
+- `FACT` 的 `Evidence` 不能为空；
+- 不要把一条 claim ledger 作为另一条 `FACT` 的唯一证据；
+- 易变外部事实附带 URL 和访问日期。
 
-## 4. article.md 元数据
+## 4. research-manifest.yaml
 
-```markdown
----
-title:
-subtitle:
-repository:
-commit:
+```yaml
+topic:
+stage: research
 research_date:
-audience:
-status: draft
----
-
-# 能体现中心论点的标题
-
-开篇：具体问题和核心发现。
-
-## 承载证据的标题
-
-机制、代码证据及其意义。
-
-## 收益与代价
-
-把代价放在导致它的设计决策旁边。
-
-## 竞品坐标
-
-比较系统层级和成立条件。
-
-## 谁适合使用
-
-适用与不适用场景。
-
-## 可迁移原则
-
-读者可以应用到其他项目的经验。
-
-## 资料来源
+commit:
+claim_ledger: claim-ledger.md
+status: draft | reviewed | complete
+open_questions: open-questions.md
 ```
 
-## 5. VOICE.md
+## 5. open-questions.md
 
 ```markdown
-# 写作人设
+# Open Questions
 
-## 一句话人设
-
-## 目标读者
-
-## 内容承诺
-
-每篇文章必须增加代码证据、独立判断、设计权衡和可复用经验。
-
-## 语气
-
-工程师同行；专业、克制、好奇、直接。
-
-## 推荐表达
-
-- 我的理解是……
-- 从代码可以看到……
-- 这套设计在……时成立，代价是……
-
-## 禁止表达
-
-- 革命性
-- 全面领先
-- 一分钟掌握
-- 建议收藏
-
-## 固定栏目
-
-- README 之后
-- 一个设计决策
-- 生产环境追问
-- 竞品坐标
+| ID | Question | Why It Matters | Missing Evidence | Next Check |
+|---|---|---|---|---|
+| OQ-001 | ... | ... | ... | ... |
 ```
