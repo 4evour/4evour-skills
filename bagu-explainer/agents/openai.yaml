@@ -1,0 +1,4 @@
+interface:
+  display_name: "八股知识讲解生成"
+  short_description: "把技术面试主题写成模块两层的复习文档：知识点条目 + 可背问答 + 原理讲透"
+  default_prompt: "使用 $bagu-explainer 生成 MySQL 篇八股复习文档：按模块组织，先知识点（关键字条目）后面试问答（A 可背诵口语稿、W 讲透为什么），题单先自主列再对照参考清单查漏，篇幅按考点数量控制在单篇 18 页内。"

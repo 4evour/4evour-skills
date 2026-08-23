@@ -17,6 +17,8 @@ adapt-social-content
 └── baoyu-xhs-images           低文字量概念图、关系图和手绘插画
 ```
 
+`bagu-explainer` 不在这条链上，负责技术面试八股内容的独立生成（知识点 + 真实问答），输出可直接交给 `adapt-social-content` 或卡片技能做平台发布。
+
 ## 当前包含
 
 | Skill | 职责 | 推荐使用场景 |
@@ -26,6 +28,7 @@ adapt-social-content
 | `adapt-social-content` | 把审核后的文章改写成平台内容和卡片脚本 | 微信公众号、小红书、X、知乎和视频脚本 |
 | `guizang-social-card-skill` | 使用 HTML/CSS 和真实素材确定性渲染 | 源码、命令、截图、微信封面、Live Photo、Swiss/杂志风卡片 |
 | `baoyu-xhs-images` | 使用 ImageGen 生成风格统一的插画卡片 | 手绘概念图、关系图、流程图和低文字量知识卡 |
+| `bagu-explainer` | 把技术面试主题写成"模块两层"复习文档（知识点条目 + Q/A/W 问答） | Redis/MySQL/JVM/网络/操作系统八股总结、面试复习笔记 |
 
 ## 图片路由
 
@@ -50,7 +53,8 @@ $skills = @(
   'write-professional-technical-article',
   'adapt-social-content',
   'guizang-social-card-skill',
-  'baoyu-xhs-images'
+  'baoyu-xhs-images',
+  'bagu-explainer'
 )
 
 foreach ($skill in $skills) {
@@ -76,7 +80,8 @@ foreach ($skill in $skills) {
 ├── write-professional-technical-article/
 ├── adapt-social-content/
 ├── guizang-social-card-skill/
-└── baoyu-xhs-images/
+├── baoyu-xhs-images/
+└── bagu-explainer/
 ```
 
 每个 Skill 使用 `SKILL.md` 描述触发条件和核心流程；详细方法放入 `references/`，确定性工具放入 `scripts/`，输出模板和视觉资产放入 `assets/`。
@@ -85,6 +90,6 @@ foreach ($skill in $skills) {
 
 - `baoyu-xhs-images` 基于 [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills) 的同名 Skill，按 MIT License 使用和修改；仓库内保留许可证。
 - `guizang-social-card-skill` 基于 [op7418/guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill)，按 AGPL-3.0 使用和修改；仓库内保留许可证与商业授权说明。
-- 其余三个内容工作流为本仓库维护的中文 Skills。
+- 其余四个内容 Skill（研究、写作、社交适配、八股生成）为本仓库维护的中文 Skills。
 
 本仓库只收录运行所需的 Skill 文件，不包含上游仓库的 `.git`、`node_modules`、本地测试产物和生成内容。
