@@ -119,7 +119,8 @@ paired_with:
 创建 `editorial-review.md`：
 
 - 结构编辑：文章目的、中心论点、章节顺序、证据覆盖、反论点和读者收益；
-- 语言编辑：术语一致性、段落节奏、标题信息量、事实/推断/意见区分和重复表达。
+- 语言编辑：术语一致性、段落节奏、标题信息量、事实/推断/意见区分和重复表达；
+- 文风终检：结构级 AI 味检查和 deslop 检测脚本，见 [references/editorial-gates.md](references/editorial-gates.md) 的文风终检一节。
 
 只有结构和事实边界通过后，才把文章交给 `adapt-social-content`。
 
