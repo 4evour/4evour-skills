@@ -56,7 +56,10 @@ description: >
    - [ ] A 照着念给面试官听不违和；W 用场景推演/反证，读完能用自己的话推出 A
    - [ ] 每个论点有机制解释或具体数字，无"只报名词"段落
    - [ ] 关键数字/命令/版本已核实
-   - [ ] 无 AI 味词汇（禁词表见 [references/style-rules.md](references/style-rules.md)）
+   - [ ] 无 AI 味词汇和结构级 AI 味（禁词表 + 结构病灶清单见
+     [references/style-rules.md](references/style-rules.md)）
+   - [ ] 已运行 deslop_check.py 终检（或按结构病灶清单人工过检），
+     命中逐条核对，自然语境的可放过
    - [ ] 输出严格符合 output-format.md 的 Markdown 模板
    - [ ] 单篇导出 PDF ≤ 18 页（平台硬上限，超了拆上下篇）；篇幅与考点
      数量匹配，无凑页注水
