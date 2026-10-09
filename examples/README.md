@@ -1,27 +1,30 @@
-# 示例：从 Skill 到可发布内容
+# 示例：理解工作流，不把历史稿当最新规范
 
-这里放的是从本地工作区筛选出来的 **Markdown 示例**，用于在另一台电脑上理解和复用仓库里的 Skill。
+这里收录从原工作区筛选出的 Markdown 快照，用来理解 Skill 的结构、改稿和交接。**它们不是完整可执行测试包，也不是本次重新核实的技术答案库。**
 
-## 示例目录
+## 示例目录与适用状态
 
-| 示例 | 展示内容 | 对应 Skill |
+| 示例 | 展示内容 | 状态与限制 |
 |---|---|---|
-| `bagu-explainer/redis/` | Redis 题单产出的知识点、Q/A/W 文稿，以及进一步改成的小红书文字稿 | `bagu-explainer`、`adapt-social-content` |
-| `tech-writing-zh/computer-network/` | 同一篇计算机网络稿的八股初稿与去 AI 腔后的版本 | `tech-writing-zh` |
-| `content-pipeline/distributed-systems/` | 事实账本 → 技术讲解 → claim ledger → 卡片脚本 → 发布文案 | `write-concept-explainer`、`adapt-social-content` |
-| `research-to-social/tencentdb-agent-memory/` | 开源项目研究包 → 专业文章 → 社交文案的关键 Markdown 交接文件 | `research-open-source-project`、`write-professional-technical-article`、`adapt-social-content` |
+| [计算机网络改稿前后](tech-writing-zh/computer-network/README.md) | 模块式知识点 + Q/A/W，以及 `tech-writing-zh` 的文风修改 | 优先参考当前八股骨架；两份稿各含 11 个模块、19 组 Q/A/W，事实仍需按选题重新审核 |
+| [Redis 八股到社交草稿](bagu-explainer/redis/README.md) | 历史知识点、Q/A 与小红书文字草稿 | 旧格式：28 组 Q/A，没有 W 层；不符合当前完整八股规范 |
+| [分布式系统内容交接](content-pipeline/distributed-systems/README.md) | 事实账本 → 讲解母稿 → claim ledger → 卡片脚本 → 发布文案 | 精选交接文件；不含完整审核、渲染和发布产物，不能默认视为通过验收 |
+| [TencentDB Agent Memory 研究到社交](research-to-social/tencentdb-agent-memory/README.md) | 研究包的部分文件、专业文章和社交文案 | 精选研究快照；缺少部分完整流程文件，原稿图片引用保留但图片未纳入仓库 |
 
 ## 选取原则
 
-- 只收录 Markdown 和少量必要的文本材料，不把整个内容工作区搬进来。
+- 只保留可公开的 Markdown 和少量必要文本，不搬整个内容工作区。
 - 不收录 PDF、图片、压缩包、渲染缓存、Notion 导出目录和本地测试产物。
 - 不收录个人成长记录、求职面经、联系方式或其他不适合公开的材料。
-- 示例文件是从原工作稿复制出来的，原工作区仍然保留；修改示例不会反向修改原稿。
-- `tencentdb-agent-memory/article/article.md` 保留了原稿中的图片引用，但示例仓库没有同步那些图片资源；阅读文字链路即可。
+- 示例来自原工作稿的副本；修改示例不会反向修改原稿。
+- 历史格式保留并标记，不静默补写成新规范或最新技术结论。
 
 ## 怎么使用
 
-1. 先阅读对应 Skill 的 `SKILL.md`。
-2. 再看示例目录中的 `README.md` 和 Markdown 文件，理解输入、交接和输出。
-3. 在自己的选题目录中复制同样的阶段结构，再替换成自己的资料和原稿。
-4. 生成图片、PDF 和最终发布文件放在项目自己的工作区，不要回填到 Skill 仓库。
+1. 先读对应 `SKILL.md` 和输出规范，再看示例；冲突时以当前明确的规范为准。
+2. 新八股稿优先参考网络示例的 Q/A/W 结构；Redis 示例只参考题目组织和历史表达，不直接复制格式或答案。
+3. 在独立选题工作区准备来源、版本、审核结果与事实台账，再迁移阶段结构。
+4. 研究结构校验器按同一目录查找必需文件，不会自动拼接这里的多阶段目录；精选示例缺文件时，不应强行标成“测试通过”。
+5. 图片、PDF 和发布文件留在选题工作区，不回填到 Skill 仓库。
+
+当前维护问题与验证范围见 [Skill 生命周期与整理计划](../docs/skill-lifecycle.md)。
