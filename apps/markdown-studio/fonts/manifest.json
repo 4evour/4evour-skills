@@ -1,0 +1,86 @@
+[
+  {
+    "family": "Zhi Mang Xing",
+    "label": "志莽行书",
+    "category": "手写 / 引用",
+    "file": "zhimangxing/ZhiMangXing-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zhimangxing",
+    "license": "SIL OFL 1.1",
+    "sha256": "644e0cae9b40f0b10ab729a01bd32032e3973bac22be3dccae01bf6ae7fde969",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zhimangxing/ZhiMangXing-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zhimangxing/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127"
+  },
+  {
+    "family": "Noto Serif SC",
+    "label": "思源宋体",
+    "category": "宋体 / 正文",
+    "file": "notoserifsc/NotoSerifSC[wght].ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notoserifsc",
+    "license": "SIL OFL 1.1",
+    "sha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/notoserifsc/NotoSerifSC[wght].ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/notoserifsc/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127"
+  },
+  {
+    "family": "ZCOOL XiaoWei",
+    "label": "站酷小薇",
+    "category": "宋体 / 标题",
+    "file": "zcoolxiaowei/ZCOOLXiaoWei-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zcoolxiaowei",
+    "license": "SIL OFL 1.1",
+    "sha256": "a42b620140f493db42f741351dfbf343c0936d58588ee8004b8b2a218d997ff1",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolxiaowei/ZCOOLXiaoWei-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolxiaowei/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127"
+  },
+  {
+    "family": "ZCOOL QingKe HuangYou",
+    "label": "站酷庆科黄油",
+    "category": "圆润 / 标题",
+    "file": "zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zcoolqingkehuangyou",
+    "license": "SIL OFL 1.1",
+    "sha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolqingkehuangyou/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127"
+  },
+  {
+    "family": "ZCOOL KuaiLe",
+    "label": "站酷快乐体",
+    "category": "活泼 / 标题",
+    "file": "zcoolkuaile/ZCOOLKuaiLe-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zcoolkuaile",
+    "license": "SIL OFL 1.1",
+    "sha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolkuaile/ZCOOLKuaiLe-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolkuaile/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127"
+  },
+  {
+    "family": "Ma Shan Zheng",
+    "label": "马善政毛笔楷书",
+    "category": "书法 / 封面",
+    "file": "mashanzheng/MaShanZheng-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/mashanzheng",
+    "license": "SIL OFL 1.1",
+    "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/mashanzheng/MaShanZheng-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/mashanzheng/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127"
+  },
+  {
+    "family": "Long Cang",
+    "label": "龙藏体",
+    "category": "手写 / 随笔",
+    "file": "longcang/LongCang-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/longcang",
+    "license": "SIL OFL 1.1",
+    "sha256": "e5bf2c3f24ef2327c6f136d8f73e2f9dfdf44896fdbeb35a9515f44777bb91bc",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/longcang/LongCang-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/longcang/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127"
+  }
+]

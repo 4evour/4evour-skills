@@ -1,0 +1,12 @@
+---
+title: "让长文更好看"
+subtitle: "字体、颜色、背景与排版的更多可能"
+author: "视觉设计示例"
+date: today
+design-theme: night
+format:
+  typst:
+    toc: false
+---
+
+{{< include content/设计展示正文.md >}}

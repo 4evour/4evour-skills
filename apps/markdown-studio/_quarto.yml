@@ -1,0 +1,40 @@
+project:
+  type: default
+  output-dir: output/pdf
+  post-render:
+    - python scripts/post-render.py
+  render:
+    - '**/*.qmd'
+    - '!templates/**'
+    - '!4evour-skills/**'
+    - '!md2card/**'
+    - '!tmp/**'
+    - '!output/**'
+
+lang: zh-CN
+design-theme: magazine
+design-cover: true
+mermaid-format: png
+format:
+  typst:
+    mainfont: "Noto Sans SC"
+    sansfont: "Microsoft YaHei"
+    monofont: "Consolas"
+    papersize: us-letter
+    fontsize: 16.5pt
+    margin:
+      x: 0.85in
+      y: 0.85in
+    toc: true
+    toc-title: "目录"
+    toc-depth: 2
+    number-sections: false
+    fig-pos: "h"
+    template-partials:
+      - styles/typst-template.typ
+      - styles/typst-show.typ
+    font-paths:
+      - fonts
+    keep-typ: true
+execute:
+  echo: false
