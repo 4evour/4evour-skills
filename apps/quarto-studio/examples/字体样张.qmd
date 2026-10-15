@@ -1,0 +1,203 @@
+---
+title: "字体样张与搭配"
+format: typst
+design-cover: true
+design-body-font: "Source Han Serif SC"
+design-heading-font: "Source Han Sans SC"
+---
+
+# 选一种适合内容的语气
+
+这是字体资源的实际 PDF 样张。西文字体 Source Serif 4 与 JetBrains Mono 的中文使用思源黑体回退；标题、正文、引用和代码可分别选用字体。
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[志莽行书 · Zhi Mang Xing]
+  #v(6pt)
+  #text(font: ("Zhi Mang Xing", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Zhi Mang Xing", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Zhi Mang Xing", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[思源宋体 · Noto Serif SC]
+  #v(6pt)
+  #text(font: ("Noto Serif SC", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Noto Serif SC", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Noto Serif SC", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[站酷小薇 · ZCOOL XiaoWei]
+  #v(6pt)
+  #text(font: ("ZCOOL XiaoWei", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("ZCOOL XiaoWei", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("ZCOOL XiaoWei", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[站酷庆科黄油 · ZCOOL QingKe HuangYou]
+  #v(6pt)
+  #text(font: ("ZCOOL QingKe HuangYou", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("ZCOOL QingKe HuangYou", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("ZCOOL QingKe HuangYou", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[站酷快乐体 · ZCOOL KuaiLe]
+  #v(6pt)
+  #text(font: ("ZCOOL KuaiLe", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("ZCOOL KuaiLe", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("ZCOOL KuaiLe", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[马善政毛笔楷书 · Ma Shan Zheng]
+  #v(6pt)
+  #text(font: ("Ma Shan Zheng", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Ma Shan Zheng", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Ma Shan Zheng", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[龙藏体 · Long Cang]
+  #v(6pt)
+  #text(font: ("Long Cang", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Long Cang", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Long Cang", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[霞鹜文楷 · 霞鶩文楷]
+  #v(6pt)
+  #text(font: ("霞鶩文楷", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("霞鶩文楷", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("霞鶩文楷", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[思源黑体 SC · Source Han Sans SC]
+  #v(6pt)
+  #text(font: ("Source Han Sans SC", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Source Han Sans SC", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Source Han Sans SC", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[得意黑 · Smiley Sans]
+  #v(6pt)
+  #text(font: ("Smiley Sans", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Smiley Sans", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Smiley Sans", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[更纱黑体 SC · Sarasa Gothic SC]
+  #v(6pt)
+  #text(font: ("Sarasa Gothic SC", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Sarasa Gothic SC", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Sarasa Gothic SC", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[Source Serif 4 · Source Serif 4]
+  #v(6pt)
+  #text(font: ("Source Serif 4", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Source Serif 4", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Source Serif 4", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[JetBrains Mono · JetBrains Mono]
+  #v(6pt)
+  #text(font: ("JetBrains Mono", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("JetBrains Mono", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("JetBrains Mono", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[未来荧黑 · Glow Sans SC]
+  #v(6pt)
+  #text(font: ("Glow Sans SC", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Glow Sans SC", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Glow Sans SC", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[思源宋体 SC · Source Han Serif SC]
+  #v(6pt)
+  #text(font: ("Source Han Serif SC", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("Source Han Serif SC", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("Source Han Serif SC", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```
+
+```{=typst}
+#block(breakable: false, above: 12pt, below: 10pt)[
+  #text(font: "Source Han Sans SC", size: 11pt, fill: rgb("#B7472A"))[霞鹜文楷屏幕版 · LXGW WenKai Screen]
+  #v(6pt)
+  #text(font: ("LXGW WenKai Screen", "Source Han Sans SC"), size: 22pt)[把文字排成美好的阅读]
+  #v(5pt)
+  #text(font: ("LXGW WenKai Screen", "Source Han Sans SC"), size: 15pt)[春日有信，山水相逢。让内容容易理解，让长文也能舒适地传阅。]
+  #v(4pt)
+  #text(font: ("LXGW WenKai Screen", "Source Han Sans SC"), size: 13pt)[Design for reading · Aa Bb Cc · 0123456789]
+]
+```

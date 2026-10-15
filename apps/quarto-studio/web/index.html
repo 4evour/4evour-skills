@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quarto Studio · 文章排版</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23294560'/%3E%3Ctext x='10' y='29' fill='white' font-size='28' font-family='Georgia'%3EQ%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js?v=paper-components-1"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/app/" aria-label="Quarto Studio 首页"><span class="brand-mark">Q</span><span><strong>Quarto Studio</strong><small>让文字成为好读的页面</small></span></a>
+    <div class="engine-badge"><span></span>Quarto + Typst</div>
+    <nav class="top-actions" aria-label="工作台操作">
+      <a id="compare-link" class="quiet-link" href="http://127.0.0.1:8765/app/" target="_blank" rel="noreferrer">MD2Card 版本 ↗</a>
+      <button id="export-settings" class="button quiet">保存样式</button>
+      <button id="render-button" class="button primary"><span>↻</span> 立即更新</button>
+    </nav>
+  </header>
+  <main class="workspace">
+    <aside class="editor-panel" aria-label="文章和样式设置">
+      <div class="panel-tabs" role="tablist" aria-label="编辑方式">
+        <button id="tab-content" role="tab" aria-selected="true" aria-controls="content-panel">正文编辑</button>
+        <button id="tab-design" role="tab" aria-selected="false" aria-controls="design-panel">样式设置</button>
+      </div>
+      <section id="content-panel" role="tabpanel" aria-labelledby="tab-content" class="tab-panel">
+        <div class="section-heading"><div><span class="eyebrow">WRITE SOMETHING GOOD</span><h1>从一篇文章开始</h1></div><label class="file-button">导入文章<input id="import-markdown" type="file" accept=".md,.qmd,.markdown,.txt" hidden></label></div>
+        <label class="field"><span>标题</span><input id="title" type="text" maxlength="200" placeholder="留空时使用正文的一级标题"></label>
+        <div class="field-row"><label class="field"><span>副标题</span><input id="subtitle" type="text" maxlength="500" placeholder="可选"></label><label class="field author-field"><span>作者</span><input id="author" type="text" maxlength="100" placeholder="可选"></label></div>
+        <div class="editor-toolbar"><span id="source-label">Markdown / Quarto</span><div><button id="download-original" class="text-button">保存原文</button><button id="example-button" class="text-button">示例</button></div></div>
+        <div id="component-toolbar" class="component-toolbar" hidden><span>选中文字后标记</span><button type="button" data-component="lead">导语</button><button type="button" data-component="takeaway">重点</button><button type="button" data-component="pullquote">引语</button><button type="button" data-component="note">备注</button><button type="button" data-component="info">提示</button><button type="button" data-component="alert">留意</button><button type="button" data-component="success">收藏</button><button type="button" data-component="step">步骤</button><button type="button" data-component="tags" title="选中标签，多个标签用 | 分隔">标签</button><button type="button" data-component="divider" title="在光标处插入分隔线；选中文字可作为分隔标题">分隔</button></div>
+        <label class="sr-only" for="markdown">Markdown 正文</label><textarea id="markdown" spellcheck="false" placeholder="# 在这里写下标题&#10;&#10;支持标题、表格、引用、公式和 Mermaid 流程图。"></textarea>
+        <div class="editor-footer"><span id="word-count">0 字符</span><span id="save-status">草稿保存在此浏览器</span></div>
+        <details class="attachments"><summary>图片附件 <span id="attachment-count">0</span></summary><p class="help">添加正文引用的图片，并填写一致的引用路径，例如 assets/chart.png。</p><label class="file-button">添加图片<input id="import-images" type="file" accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml" multiple hidden></label><div id="image-list"></div></details>
+        <p class="editor-tip">使用 <code>```mermaid</code> 编写流程图，使用 <code>&lt;!-- pagebreak --&gt;</code> 指定分页。原文会单独保留。</p>
+      </section>
+      <section id="design-panel" role="tabpanel" aria-labelledby="tab-design" class="tab-panel" hidden>
+        <div class="section-heading"><div><span class="eyebrow">MAKE IT YOURS</span><h2>为文字选一种气质</h2></div><button id="reset-settings" class="text-button">恢复默认</button></div>
+        <fieldset class="layout-field"><legend>选择阅读方式</legend><div id="layout-gallery" class="layout-gallery" role="group" aria-label="Kami 三套版式"></div><p class="help">切换会应用对应的纸张、字体和间距；正文保留，预览自动更新。</p></fieldset>
+        <fieldset><legend>主题</legend><div id="themes" class="theme-grid"></div></fieldset>
+        <fieldset><legend>排版模板</legend><label class="field"><span>选择版式</span><select id="template" data-setting="template"></select></label><label class="field" id="vibrant-palette-field" hidden><span>彩色模板配色</span><select id="vibrantPalette" data-setting="vibrantPalette"><option value="pastel-theme">柔和渐变</option><option value="blue-theme">晴空蓝</option><option value="green-theme">草木绿</option><option value="red-theme">玫红</option></select></label><p id="template-description" class="help"></p><button id="template-preset" class="text-button" type="button">使用这套模板的推荐字体与配色</button></fieldset>
+        <fieldset><legend>字体搭配</legend><label class="field"><span>标题字体</span><select id="headingFont" data-setting="headingFont"></select><span id="heading-sample" class="font-sample heading-sample">见字如面，读有所获。</span></label><div class="field-row"><label class="field"><span>正文字体</span><select id="bodyFont" data-setting="bodyFont"></select></label><label class="field"><span>引用字体</span><select id="quoteFont" data-setting="quoteFont"></select></label></div><div id="body-sample" class="font-sample">把内容写清楚，让阅读自然发生。</div></fieldset>
+        <fieldset><legend>页面与留白</legend><label class="field"><span>纸张比例</span><select id="paper" data-setting="paper"><option value="letter">Letter · 正式长文</option><option value="a4">A4 · 阅读与打印</option><option value="portrait">3:4 · 竖版对比</option></select></label><div class="range-field"><label for="fontSize">正文字号</label><output for="fontSize" id="fontSize-value"></output><input id="fontSize" data-setting="fontSize" type="range" min="10" max="24" step="0.5"></div><div class="range-field"><label for="headingSize">一级标题字号</label><output for="headingSize" id="headingSize-value"></output><input id="headingSize" data-setting="headingSize" type="range" min="20" max="42" step="1"></div><div class="range-field"><label for="leading">行间距</label><output for="leading" id="leading-value"></output><input id="leading" data-setting="leading" type="range" min="0.25" max="1.2" step="0.05"></div><div class="range-field"><label for="paragraphSpacing">段落间距</label><output for="paragraphSpacing" id="paragraphSpacing-value"></output><input id="paragraphSpacing" data-setting="paragraphSpacing" type="range" min="0.2" max="1.8" step="0.1"></div><div class="field-row"><div class="range-field"><label for="marginX">左右边距</label><output for="marginX" id="marginX-value"></output><input id="marginX" data-setting="marginX" type="range" min="0.35" max="1.5" step="0.05"></div><div class="range-field"><label for="marginY">上下边距</label><output for="marginY" id="marginY-value"></output><input id="marginY" data-setting="marginY" type="range" min="0.35" max="1.5" step="0.05"></div></div></fieldset>
+        <fieldset><legend>PDF 纸面与背景</legend><div id="paper-presets" class="paper-presets" role="group" aria-label="纸面预设"></div><div class="color-grid"><label><span>强调色</span><input id="accentColor" data-setting="accentColor" type="color"><small id="accentColor-value"></small></label><label><span>纸张背景</span><input id="paperColor" data-setting="paperColor" type="color"><small id="paperColor-value"></small></label><label><span>正文颜色</span><input id="textColor" data-setting="textColor" type="color"><small id="textColor-value"></small></label></div><div class="range-field"><label for="backgroundStrength">纹理浓度</label><output for="backgroundStrength" id="backgroundStrength-value"></output><input id="backgroundStrength" data-setting="backgroundStrength" type="range" min="0" max="0.6" step="0.02"></div><div class="field-row color-footer"><label class="field"><span>背景纹理</span><select id="background" data-setting="background"><option value="plain">纯色纸张</option><option value="dots">细点纸</option><option value="grid">方格纸</option><option value="ruled">横线纸</option><option value="linen">纤维纸</option><option value="wash">柔光晕染</option><option value="frame">装饰细框</option></select></label><button id="reset-colors" class="text-button">跟随主题</button></div></fieldset>
+        <fieldset id="decoration-field" hidden><legend>组件修饰</legend><label class="field"><span>组件外观</span><select id="decoration" data-setting="decoration"><option value="minimal">克制细线</option><option value="soft">圆角柔底</option><option value="editorial">编辑手记</option></select></label><p class="help">作用于重点块、引语、备注、指标和提示卡；在正文中选中文字即可添加组件。</p></fieldset>
+        <fieldset><legend>文章结构</legend><label class="toggle-row"><span>独立封面<small>使用标题、副标题和作者信息</small></span><input id="cover" data-setting="cover" type="checkbox" role="switch"></label><label class="toggle-row"><span>中文目录</span><input id="toc" data-setting="toc" type="checkbox" role="switch"></label><label class="toggle-row"><span>页眉</span><input id="header" data-setting="header" type="checkbox" role="switch"></label><label class="toggle-row"><span>页脚与页码</span><input id="footer" data-setting="footer" type="checkbox" role="switch"></label><div class="range-field"><label for="coverSize">封面标题字号</label><output for="coverSize" id="coverSize-value"></output><input id="coverSize" data-setting="coverSize" type="range" min="28" max="60" step="1"></div></fieldset>
+        <fieldset><legend>正文组件</legend><label class="field"><span>代码字体</span><select id="codeFont" data-setting="codeFont"></select></label><div class="field-row"><label class="field"><span>代码块</span><select id="codeStyle" data-setting="codeStyle"><option value="codly">行号与语法高亮</option><option value="plain">模板原生</option></select></label><label class="field"><span>引用</span><select id="quoteStyle" data-setting="quoteStyle"><option value="showybox">圆角引用框</option><option value="template">模板原生</option></select></label></div></fieldset>
+        <label class="file-button">导入样式 JSON<input id="import-settings" type="file" accept=".json" hidden></label>
+      </section>
+      <div class="auto-bar"><label title="停止输入约 0.5 秒后自动排版；编译期间保留上次预览"><input id="auto-render" type="checkbox" checked> 自动更新预览</label><span id="engine-ready">检查环境…</span></div>
+    </aside>
+    <section class="preview-panel" aria-label="真实 PDF 页面预览">
+      <div class="preview-toolbar"><div><span class="eyebrow">PDF PREVIEW</span><h2>实际生成的页面 <span id="page-count"></span></h2></div><div class="preview-tools"><button id="zoom-out" class="icon-button" aria-label="缩小预览">−</button><output id="zoom-label">适合宽度</output><button id="zoom-in" class="icon-button" aria-label="放大预览">＋</button><a id="pdf-link" class="button compact disabled" aria-disabled="true" target="_blank" rel="noreferrer">打开 PDF ↗</a><a id="png-link" class="button compact disabled" aria-disabled="true">切页 PNG ↓</a></div></div>
+      <div class="render-status"><span id="status-dot" class="status-dot"></span><span id="render-status" role="status" aria-live="polite">准备就绪</span><span id="render-time"></span><button id="details-button" class="text-button">任务详情</button></div>
+      <div id="notice" class="notice" hidden></div>
+      <div id="preview-scroll" class="preview-scroll"><div id="preview-pages" class="preview-pages"><div class="empty-preview"><div class="empty-paper"><span>Q</span><i></i><i></i><i></i></div><h3>给文字一个好的版面</h3><p>编辑正文或选择示例，预览会自动生成。<br>这里显示的每一页，都来自实际生成的 PDF。</p></div></div></div>
+      <div class="preview-bottom"><span>原文 → Quarto → Typst → PDF → 页面图片</span><span id="artifact-info">文件生成在本机</span></div>
+    </section>
+  </main>
+  <dialog id="examples-dialog"><div class="dialog-heading"><h2>选择一份示例</h2><button data-close="examples-dialog" class="icon-button" aria-label="关闭示例">×</button></div><p class="help">“同稿对比”与 MD2Card 内置文章相同，便于观察两套模板和排版方式。</p><div id="example-list"></div></dialog>
+  <dialog id="details-dialog"><div class="dialog-heading"><h2>本次生成</h2><button data-close="details-dialog" class="icon-button" aria-label="关闭任务详情">×</button></div><p id="task-info" class="help">生成后可查看和下载中间文件。</p><div id="artifact-links" class="artifact-links"></div><pre id="error-detail" hidden></pre></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

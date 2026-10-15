@@ -1,0 +1,143 @@
+[
+  {
+    "id": "wonderous-book",
+    "version": "0.1.2",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/wonderous-book-0.1.2.tar.gz",
+    "sha256": "8037aaf2c409b1d208d19490dbf548923b137427f9a3b78ce219861dc6df4534",
+    "path": "resources/upstream/typst/wonderous-book/0.1.2",
+    "license": "MIT-0",
+    "license_file": "resources/upstream/typst/wonderous-book/0.1.2/LICENSE",
+    "license_sha256": "dfe79207335c6df3c4b77acad796b204e713d9c3f16c2247f2d5ce4ca66d57b0"
+  },
+  {
+    "id": "ilm",
+    "version": "2.1.1",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/ilm-2.1.1.tar.gz",
+    "sha256": "4b37f52972966aa6828c467c1196cace69e6c40baf6f8e48e0164c0a18ba8cb6",
+    "path": "resources/upstream/typst/ilm/2.1.1",
+    "license": "MIT-0",
+    "license_file": "resources/upstream/typst/ilm/2.1.1/LICENSE",
+    "license_sha256": "dfe79207335c6df3c4b77acad796b204e713d9c3f16c2247f2d5ce4ca66d57b0"
+  },
+  {
+    "id": "codly",
+    "version": "2.0.0",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/codly-2.0.0.tar.gz",
+    "sha256": "44f3e3cf26fca483f0e682f0159c5026af0a2dd22e55703a6bb2d4e337d5915e",
+    "path": "resources/upstream/typst/codly/2.0.0",
+    "license": "MIT",
+    "license_file": "resources/upstream/typst/codly/2.0.0/LICENSE",
+    "license_sha256": "0e7fe80f58f5a704bba4e76167275006ed1ee63b995a6215443e1a70eca2b06c"
+  },
+  {
+    "id": "dashing-dept-news",
+    "version": "0.1.1",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/dashing-dept-news-0.1.1.tar.gz",
+    "sha256": "898a0f0d1fb315b38a17b58424a695c1552f89329fee11dc455995e3b5576c5c",
+    "path": "resources/upstream/typst/dashing-dept-news/0.1.1",
+    "license": "MIT-0",
+    "license_file": "resources/upstream/typst/dashing-dept-news/0.1.1/LICENSE",
+    "license_sha256": "dfe79207335c6df3c4b77acad796b204e713d9c3f16c2247f2d5ce4ca66d57b0"
+  },
+  {
+    "id": "showybox",
+    "version": "2.0.4",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/showybox-2.0.4.tar.gz",
+    "sha256": "2d415e38ad85143bb0ca7a41f47cdcbbf3186a002a9c637ce3df7ced7125858f",
+    "path": "resources/upstream/typst/showybox/2.0.4",
+    "license": "MIT",
+    "license_file": "resources/upstream/typst/showybox/2.0.4/LICENSE",
+    "license_sha256": "9e96ac67f0d7df6775c9255abe4c4f763695701a5dce8ece648b47dbd734ee53"
+  },
+  {
+    "id": "orange-book",
+    "version": "0.7.1",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/orange-book-0.7.1.tar.gz",
+    "sha256": "76ee4c0eda69b27c4100d4d796a7ebff6d5b9e5ab7d35c09de912abdd5f0fa3f",
+    "path": "resources/upstream/typst/orange-book/0.7.1",
+    "license": "MIT-0",
+    "license_file": "resources/upstream/typst/orange-book/0.7.1/LICENSE",
+    "license_sha256": "dfe79207335c6df3c4b77acad796b204e713d9c3f16c2247f2d5ce4ca66d57b0"
+  },
+  {
+    "id": "vibrant-color",
+    "version": "0.2.1",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/vibrant-color-0.2.1.tar.gz",
+    "sha256": "493035d7214b2066d1acfc0419860de76526f29a25e7d5fea568cd2a58f15312",
+    "path": "resources/upstream/typst/vibrant-color/0.2.1",
+    "license": "MIT",
+    "license_file": "resources/upstream/typst/vibrant-color/0.2.1/LICENSE",
+    "license_sha256": "dff52c0d2c5dcdfb416fa16cc5337b7090af9c45fd5675bc0af9d403053be8b8",
+    "license_source": "https://github.com/SHAfoin/shafoin-typst-template/blob/c0fb53601d6094594ce2c58ce6840a9643a6ed03/LICENSE"
+  },
+  {
+    "id": "modern-technique-report",
+    "version": "0.1.0",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/modern-technique-report-0.1.0.tar.gz",
+    "sha256": "a1c79171db6a5aae96ac3b6668c3b5092dcb35e2dd7413eadf1c5419abe65d14",
+    "path": "resources/upstream/typst/modern-technique-report/0.1.0",
+    "license": "MIT",
+    "license_file": "resources/upstream/typst/modern-technique-report/0.1.0/LICENSE",
+    "license_sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+  },
+  {
+    "id": "elembic",
+    "version": "1.1.1",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/elembic-1.1.1.tar.gz",
+    "sha256": "e3a8ec6b2ad5f43d93ae31dd5742de7256c57719675636179cd818f26ca7bb88",
+    "path": "resources/upstream/typst/elembic/1.1.1",
+    "license": "MIT OR Apache-2.0",
+    "license_file": "resources/upstream/typst/elembic/1.1.1/LICENSE",
+    "license_sha256": "36bb253818ac13761081556ff5c457d626da9df1eb4f56194d9ad3926c418a68"
+  },
+  {
+    "id": "tufte",
+    "version": "5ef6932c7c72e155f589de5cd121d336a2ffad5c",
+    "kind": "quarto",
+    "source": "https://github.com/christopherkenny/tufte",
+    "path": "resources/upstream/quarto/tufte",
+    "license": "MIT",
+    "license_file": "resources/upstream/quarto/tufte/LICENSE",
+    "license_sha256": "71ef67f6f868a475b2847b580411110d1552243df4e5a4428fbfe205d1e5eba2"
+  },
+  {
+    "id": "orange-book",
+    "version": "2b59b76727f22bdcc3522ee56e2437f6abd81c36",
+    "kind": "quarto",
+    "source": "https://github.com/quarto-ext/orange-book",
+    "path": "resources/upstream/quarto/orange-book",
+    "license": "MIT",
+    "license_file": "resources/upstream/quarto/orange-book/LICENSE",
+    "license_sha256": "ed27a3b255cdbb14d59e2817a8ee8342f2f0b0e22ec5041b3c678389a189276f"
+  },
+  {
+    "id": "templates",
+    "version": "79fcc3a4cd1b59543d962367c6d6d257c7beab56",
+    "kind": "quarto",
+    "source": "https://github.com/quarto-ext/typst-templates",
+    "path": "resources/upstream/quarto/templates",
+    "license": "CC0-1.0",
+    "license_file": "resources/upstream/quarto/templates/LICENSE",
+    "license_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+  },
+  {
+    "id": "drafting",
+    "version": "0.2.2",
+    "kind": "typst",
+    "source": "https://packages.typst.org/preview/drafting-0.2.2.tar.gz",
+    "sha256": "ec483b19adac51e32508eea15f74bd1aebd9062ba4797f4e8d5862a839c8b8a3",
+    "path": "resources/upstream/typst/drafting/0.2.2",
+    "license": "Unlicense",
+    "license_file": "resources/upstream/typst/drafting/0.2.2/LICENSE",
+    "license_sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+  }
+]

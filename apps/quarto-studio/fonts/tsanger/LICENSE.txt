@@ -1,0 +1,14 @@
+仓耳今楷02字体来源与许可记录
+
+字体作者：北京仓耳文字技术有限公司。保留所有权利。
+来源：Kami 仓库 assets/fonts/TsangerJinKai02-W04.ttf 与 W05.ttf。
+固定提交：934dc5f0602c12b81f4c0e275cd47269296e62fb。
+Kami README 在该提交明确说明：TsangerJinKai02 is free for personal use only; commercial use requires a license from tsanger.cn.
+本项目按用户明确声明的个人阅读用途准备，不把这些字体列为开源字体，也不提交字体二进制。
+
+字体文件内嵌原始声明（保留原文）：
+©北京仓耳文字技术有限公司。保留所有权利。
+无论您以何种方式使用该字体，您必须事先获得北京仓耳文字技术有限公司的正式书面许可。
+
+来源说明：https://github.com/Tw93/kami/blob/934dc5f0602c12b81f4c0e275cd47269296e62fb/README.md#license
+字体官网：https://tsanger.cn

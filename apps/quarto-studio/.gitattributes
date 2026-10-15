@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+# 保留校验清单中的许可证原始字节，避免换行归一化改变 SHA256。
+fonts/**/OFL.txt -text -whitespace
+fonts/**/LICENSE.txt -text -whitespace
+resources/KAMI-LICENSE -text
+# 上游原始源码和许可按来源保留，第三方空白不做格式清理。
+resources/upstream/** -text -whitespace
+styles/resources/runtime/** -whitespace
+styles/resources/runtime/**/LICENSE -text
+styles/resources/runtime/*.LICENSE -text

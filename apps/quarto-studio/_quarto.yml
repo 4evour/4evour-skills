@@ -1,0 +1,57 @@
+project:
+  type: default
+  output-dir: output/pdf
+  post-render:
+    - python scripts/post-render.py
+  render:
+    - studio-articles/**/*.qmd
+    - examples/*.qmd
+
+lang: zh-CN
+design-theme: magazine
+design-cover: false
+design-vibrant-theme: pastel-theme
+design-code-font: "JetBrains Mono"
+design-code-style: codly
+design-quote-style: showybox
+design-heading-font: "Microsoft YaHei"
+design-body-font: "Noto Sans SC"
+design-quote-font: "KaiTi"
+design-fontsize: 16.5
+design-heading-size: 28
+design-cover-size: 42
+design-leading: 0.65
+design-spacing: 0.8
+design-page-width: 612
+design-page-height: 792
+design-margin-x: 61.2
+design-margin-y: 61.2
+design-background: plain
+design-background-strength: 0.22
+design-decoration: minimal
+design-header: true
+design-footer: true
+mermaid-format: png
+format:
+  typst:
+    syntax-highlighting: idiomatic
+    mainfont: "Noto Sans SC"
+    fontsize: 16.5pt
+    papersize: us-letter
+    margin:
+      x: 0.85in
+      y: 0.85in
+    toc: false
+    toc-title: "目录"
+    toc-depth: 2
+    number-sections: false
+    fig-pos: "h"
+    font-paths:
+      - fonts
+    keep-typ: true
+    template-partials:
+      - styles/typst-template.typ
+      - styles/typst-show.typ
+      - styles/page.typ
+execute:
+  echo: false

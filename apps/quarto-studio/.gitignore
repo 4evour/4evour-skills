@@ -1,0 +1,14 @@
+.quarto/
+studio-articles/
+output/
+tmp/
+**/__pycache__/
+*.pyc
+**/*_files/
+fonts/**/*.ttf
+fonts/**/*.otf
+fonts/**/*.woff*
+
+**/*.quarto_ipynb
+
+examples/*.typ

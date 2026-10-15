@@ -1,0 +1,385 @@
+[
+  {
+    "family": "Zhi Mang Xing",
+    "label": "志莽行书",
+    "category": "手写 / 引用",
+    "file": "zhimangxing/ZhiMangXing-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zhimangxing",
+    "license": "SIL OFL 1.1",
+    "sha256": "644e0cae9b40f0b10ab729a01bd32032e3973bac22be3dccae01bf6ae7fde969",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zhimangxing/ZhiMangXing-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zhimangxing/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127",
+    "license_sha256": "10947328199e369a3e6b4a67e8e5507ed99d5bbb264a1f156415aa9b665e4d15"
+  },
+  {
+    "family": "Noto Serif SC",
+    "label": "思源宋体",
+    "category": "宋体 / 正文",
+    "file": "notoserifsc/NotoSerifSC[wght].ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notoserifsc",
+    "license": "SIL OFL 1.1",
+    "sha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/notoserifsc/NotoSerifSC[wght].ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/notoserifsc/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127",
+    "license_sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+  },
+  {
+    "family": "ZCOOL XiaoWei",
+    "label": "站酷小薇",
+    "category": "宋体 / 标题",
+    "file": "zcoolxiaowei/ZCOOLXiaoWei-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zcoolxiaowei",
+    "license": "SIL OFL 1.1",
+    "sha256": "a42b620140f493db42f741351dfbf343c0936d58588ee8004b8b2a218d997ff1",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolxiaowei/ZCOOLXiaoWei-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolxiaowei/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127",
+    "license_sha256": "a094514ca57cf8f9c5e8d8d1adab5d8cd3a377297ff016f9df2c05b3ecd77f0a"
+  },
+  {
+    "family": "ZCOOL QingKe HuangYou",
+    "label": "站酷庆科黄油",
+    "category": "圆润 / 标题",
+    "file": "zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zcoolqingkehuangyou",
+    "license": "SIL OFL 1.1",
+    "sha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolqingkehuangyou/ZCOOLQingKeHuangYou-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolqingkehuangyou/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127",
+    "license_sha256": "f1bce31b817dee01c1e4ef8bc45d8ecb95f01f4abbf0a985007cb3cd0fd8123d"
+  },
+  {
+    "family": "ZCOOL KuaiLe",
+    "label": "站酷快乐体",
+    "category": "活泼 / 标题",
+    "file": "zcoolkuaile/ZCOOLKuaiLe-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zcoolkuaile",
+    "license": "SIL OFL 1.1",
+    "sha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolkuaile/ZCOOLKuaiLe-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/zcoolkuaile/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127",
+    "license_sha256": "538078469839b4a2e7ad22bef4ebe41681a4e53749bb2a072144024f1d6d703d"
+  },
+  {
+    "family": "Ma Shan Zheng",
+    "label": "马善政毛笔楷书",
+    "category": "书法 / 封面",
+    "file": "mashanzheng/MaShanZheng-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/mashanzheng",
+    "license": "SIL OFL 1.1",
+    "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/mashanzheng/MaShanZheng-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/mashanzheng/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127",
+    "license_sha256": "d7bdb1cee215b689e23c2f95672a6084c790542170648267a55114103d756a08"
+  },
+  {
+    "family": "Long Cang",
+    "label": "龙藏体",
+    "category": "手写 / 随笔",
+    "file": "longcang/LongCang-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/longcang",
+    "license": "SIL OFL 1.1",
+    "sha256": "e5bf2c3f24ef2327c6f136d8f73e2f9dfdf44896fdbeb35a9515f44777bb91bc",
+    "download_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/longcang/LongCang-Regular.ttf",
+    "license_url": "https://raw.githubusercontent.com/google/fonts/66928797f271fed5ee428544e7229685e2d90127/ofl/longcang/OFL.txt",
+    "upstream_commit": "66928797f271fed5ee428544e7229685e2d90127",
+    "license_sha256": "603546b7219a94bb59bf8294458194a5010119486354092b66a09a3fd61aeacc"
+  },
+  {
+    "family": "霞鶩文楷",
+    "label": "霞鹜文楷",
+    "category": "中文 / 正文",
+    "source": "https://github.com/lxgw/LxgwWenKai",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/fe1d2e8f6054af168e84de0f46ae43608c4c86f0/OFL.txt",
+    "upstream_commit": "fe1d2e8f6054af168e84de0f46ae43608c4c86f0",
+    "file": "wenkai/Regular.ttf",
+    "download_url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/fe1d2e8f6054af168e84de0f46ae43608c4c86f0/fonts/TTF/LXGWWenKai-Regular.ttf",
+    "sha256": "bf73f995c05f3f7baf7840b9d76d8d9678c8b150a020946a394ca63c67ed1350",
+    "files": [
+      {
+        "file": "wenkai/Regular.ttf",
+        "download_url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/fe1d2e8f6054af168e84de0f46ae43608c4c86f0/fonts/TTF/LXGWWenKai-Regular.ttf",
+        "sha256": "bf73f995c05f3f7baf7840b9d76d8d9678c8b150a020946a394ca63c67ed1350"
+      },
+      {
+        "file": "wenkai/Medium.ttf",
+        "download_url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/fe1d2e8f6054af168e84de0f46ae43608c4c86f0/fonts/TTF/LXGWWenKai-Medium.ttf",
+        "sha256": "cd665aabdecd4c025d30307efaebe02e604b6f768885b28297bc22a8cb379e03"
+      }
+    ],
+    "previewFormat": "truetype",
+    "license_sha256": "1a25e35da1031c6c3436fde545bb9cb5aca954e9873afe510c834b8b79bd21a0"
+  },
+  {
+    "family": "Source Han Sans SC",
+    "label": "思源黑体 SC",
+    "category": "中文 / 正文",
+    "source": "https://github.com/adobe-fonts/source-han-sans",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/0b993716f6910f0c8e00f957c767ab3cf5cb7602/LICENSE.txt",
+    "upstream_commit": "a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2",
+    "file": "han-sans/Regular.otf",
+    "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf",
+    "sha256": "f1d8611151880c6c336aabeac4640ef434fa13cbfbf1ffe82d0a71b2a5637256",
+    "files": [
+      {
+        "file": "han-sans/Regular.otf",
+        "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf",
+        "sha256": "f1d8611151880c6c336aabeac4640ef434fa13cbfbf1ffe82d0a71b2a5637256"
+      },
+      {
+        "file": "han-sans/Bold.otf",
+        "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2/OTF/SimplifiedChinese/SourceHanSansSC-Bold.otf",
+        "sha256": "df2b90f5bcc6d01dfc964cec5f6d535d6b6aebd26ed7fd79a9c1b3f2112fcb6b"
+      }
+    ],
+    "previewFormat": "opentype",
+    "license_sha256": "fcac737e761ec63dbfbdce11030a1780161920d80315edba9c8beff1c2bac5a2",
+    "license_commit": "0b993716f6910f0c8e00f957c767ab3cf5cb7602",
+    "release": "2.005R"
+  },
+  {
+    "family": "Smiley Sans",
+    "label": "得意黑",
+    "category": "创意 / 标题",
+    "source": "https://github.com/atelier-anchor/smiley-sans",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/atelier-anchor/smiley-sans/cbf2ce4a27933855e400f693265ef890fb60f21d/LICENSE",
+    "upstream_commit": "cbf2ce4a27933855e400f693265ef890fb60f21d",
+    "file": "smiley/Regular.ttf",
+    "download_url": "https://github.com/atelier-anchor/smiley-sans/releases/download/v2.0.1/smiley-sans-v2.0.1.zip",
+    "sha256": "b447d7e781f08bc95c4c9f23ba71ed2b8ebb639aa7184485c71c4ca5afcd25c4",
+    "archive_sha256": "299c0be6c960ae37361762eca76f7d0cd516615435bb96c0d4b98a1e70178a07",
+    "archive_member": "SmileySans-Oblique.ttf",
+    "archive_type": "zip",
+    "files": [
+      {
+        "file": "smiley/Regular.ttf",
+        "download_url": "https://github.com/atelier-anchor/smiley-sans/releases/download/v2.0.1/smiley-sans-v2.0.1.zip",
+        "sha256": "b447d7e781f08bc95c4c9f23ba71ed2b8ebb639aa7184485c71c4ca5afcd25c4",
+        "archive_sha256": "299c0be6c960ae37361762eca76f7d0cd516615435bb96c0d4b98a1e70178a07",
+        "archive_member": "SmileySans-Oblique.ttf",
+        "archive_type": "zip"
+      }
+    ],
+    "previewFormat": "truetype",
+    "license_sha256": "9401f4050f1b66c26b6ccdc8b0e14a3c1cc37aac122eda84386f25854a9bec72",
+    "release": "v2.0.1"
+  },
+  {
+    "family": "Sarasa Gothic SC",
+    "label": "更纱黑体 SC",
+    "category": "黑体 / 中英混排",
+    "source": "https://github.com/be5invis/Sarasa-Gothic",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/be5invis/Sarasa-Gothic/f31c230af7fb4854f40d96560e2616eafdd85926/LICENSE",
+    "upstream_commit": "f31c230af7fb4854f40d96560e2616eafdd85926",
+    "file": "sarasa/Regular.ttf",
+    "download_url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v1.0.42/SarasaGothicSC-TTF-Unhinted-1.0.42.7z",
+    "sha256": "3b45e27a4a85eb8683c05751ebb401286542c54cce0b251de6777e9158c0bc22",
+    "archive_sha256": "06d6f9a2114d954276ccc23effb29bce7ba64dd210e400612bf0ae0c34bbb69c",
+    "archive_member": "SarasaGothicSC-Regular.ttf",
+    "archive_type": "7z",
+    "files": [
+      {
+        "file": "sarasa/Regular.ttf",
+        "download_url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v1.0.42/SarasaGothicSC-TTF-Unhinted-1.0.42.7z",
+        "sha256": "3b45e27a4a85eb8683c05751ebb401286542c54cce0b251de6777e9158c0bc22",
+        "archive_sha256": "06d6f9a2114d954276ccc23effb29bce7ba64dd210e400612bf0ae0c34bbb69c",
+        "archive_member": "SarasaGothicSC-Regular.ttf",
+        "archive_type": "7z"
+      },
+      {
+        "file": "sarasa/Bold.ttf",
+        "download_url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v1.0.42/SarasaGothicSC-TTF-Unhinted-1.0.42.7z",
+        "sha256": "22c28024fa931e8ae22479550f6b34b3d79019c947c814e8f5949129bf44924e",
+        "archive_sha256": "06d6f9a2114d954276ccc23effb29bce7ba64dd210e400612bf0ae0c34bbb69c",
+        "archive_member": "SarasaGothicSC-Bold.ttf",
+        "archive_type": "7z"
+      }
+    ],
+    "previewFormat": "truetype",
+    "license_sha256": "32c932e0dbae4f6e6386964bbc2d04178707665a05ca65cf636241af13d50a53",
+    "release": "v1.0.42"
+  },
+  {
+    "family": "Source Serif 4",
+    "label": "Source Serif 4",
+    "category": "西文 / 正文",
+    "source": "https://github.com/adobe-fonts/source-serif",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/LICENSE.md",
+    "upstream_commit": "80d3f8894c09c937bebfa9011247d2e1c79fd6f4",
+    "file": "source-serif/Regular.ttf",
+    "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/TTF/SourceSerif4-Regular.ttf",
+    "sha256": "e5a4ee6a3d87bb9024796be390c6771e2a0eb1883dae25effaf57ca01668e24b",
+    "files": [
+      {
+        "file": "source-serif/Regular.ttf",
+        "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/TTF/SourceSerif4-Regular.ttf",
+        "sha256": "e5a4ee6a3d87bb9024796be390c6771e2a0eb1883dae25effaf57ca01668e24b"
+      },
+      {
+        "file": "source-serif/Bold.ttf",
+        "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/TTF/SourceSerif4-Bold.ttf",
+        "sha256": "7cf4f4e1ad74f45058d5bc61716b82560442fbdcd9d3654d2dea96bf6c683d86"
+      },
+      {
+        "file": "source-serif/It.ttf",
+        "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-serif/80d3f8894c09c937bebfa9011247d2e1c79fd6f4/TTF/SourceSerif4-It.ttf",
+        "sha256": "9d2950a8f1da66e21502c35d646a1d2148e79f9ea43fd2158cf02f5232e7f430"
+      }
+    ],
+    "previewFormat": "truetype",
+    "license_sha256": "c21d7293d87b6d7ab1d0229a2f55b77f33a7613a6a4e66f6693d68d7d8d09464"
+  },
+  {
+    "family": "JetBrains Mono",
+    "label": "JetBrains Mono",
+    "category": "等宽 / 代码",
+    "source": "https://github.com/JetBrains/JetBrainsMono",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/19371302b95d218af43299bce79ddbddd0bc364d/OFL.txt",
+    "upstream_commit": "19371302b95d218af43299bce79ddbddd0bc364d",
+    "file": "jetbrains/Regular.ttf",
+    "download_url": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/19371302b95d218af43299bce79ddbddd0bc364d/fonts/ttf/JetBrainsMono-Regular.ttf",
+    "sha256": "e6fd0d7e91550b3ed2b735d4312474362c4716edc4fc0577a0f61ed782d5aed1",
+    "files": [
+      {
+        "file": "jetbrains/Regular.ttf",
+        "download_url": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/19371302b95d218af43299bce79ddbddd0bc364d/fonts/ttf/JetBrainsMono-Regular.ttf",
+        "sha256": "e6fd0d7e91550b3ed2b735d4312474362c4716edc4fc0577a0f61ed782d5aed1"
+      },
+      {
+        "file": "jetbrains/Bold.ttf",
+        "download_url": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/19371302b95d218af43299bce79ddbddd0bc364d/fonts/ttf/JetBrainsMono-Bold.ttf",
+        "sha256": "d22c4f3821d725eb01210d278d95dfcfcaadc34699a06658d47c8a5cc5830ada"
+      },
+      {
+        "file": "jetbrains/Italic.ttf",
+        "download_url": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/19371302b95d218af43299bce79ddbddd0bc364d/fonts/ttf/JetBrainsMono-Italic.ttf",
+        "sha256": "6dc8e1322d4b2013b64e277bf66abc6748207c46a590471d4296876c2c235d0c"
+      }
+    ],
+    "previewFormat": "truetype",
+    "license_sha256": "a76abf002c49097d146e86740a3105a5d00450b1592e820a1109a8c5680cd697"
+  },
+  {
+    "family": "Glow Sans SC",
+    "label": "未来荧黑",
+    "category": "创意 / 标题",
+    "source": "https://github.com/welai/glow-sans",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/welai/glow-sans/81d8993ef84a1a475cc7e971d8bd2d9dd81d351c/OFL.txt",
+    "upstream_commit": "81d8993ef84a1a475cc7e971d8bd2d9dd81d351c",
+    "file": "glow/Regular.otf",
+    "download_url": "https://github.com/welai/glow-sans/releases/download/v0.93/GlowSansSC-Normal-v0.93.zip",
+    "sha256": "ca7d34947401b2fa6dd4fd46676d970a8cc47a40ee60c022eb7dd5068bee67ff",
+    "archive_sha256": "aa2e1fdb20337113a1d2670b695bfee83910eefa2e48f51c704e5f4a9f8ec9f1",
+    "archive_member": "GlowSansSC-Normal-Regular.otf",
+    "archive_type": "zip",
+    "files": [
+      {
+        "file": "glow/Regular.otf",
+        "download_url": "https://github.com/welai/glow-sans/releases/download/v0.93/GlowSansSC-Normal-v0.93.zip",
+        "sha256": "ca7d34947401b2fa6dd4fd46676d970a8cc47a40ee60c022eb7dd5068bee67ff",
+        "archive_sha256": "aa2e1fdb20337113a1d2670b695bfee83910eefa2e48f51c704e5f4a9f8ec9f1",
+        "archive_member": "GlowSansSC-Normal-Regular.otf",
+        "archive_type": "zip"
+      },
+      {
+        "file": "glow/Bold.otf",
+        "download_url": "https://github.com/welai/glow-sans/releases/download/v0.93/GlowSansSC-Normal-v0.93.zip",
+        "sha256": "b8381b3457bfb612e57e19517d000a169686485f57f4f9504cda59b28b4c590a",
+        "archive_sha256": "aa2e1fdb20337113a1d2670b695bfee83910eefa2e48f51c704e5f4a9f8ec9f1",
+        "archive_member": "GlowSansSC-Normal-Bold.otf",
+        "archive_type": "zip"
+      }
+    ],
+    "previewFormat": "opentype",
+    "license_sha256": "294348a0b170240633883e62548c2d3bc76306a5571a5235b2e407e0ace3b232",
+    "release": "v0.93"
+  },
+  {
+    "family": "Source Han Serif SC",
+    "label": "思源宋体 SC",
+    "category": "中文 / 正文",
+    "source": "https://github.com/adobe-fonts/source-han-serif",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/4356704ff7c68e9a84bf2bd489c9ebe186a9e2ef/LICENSE.txt",
+    "upstream_commit": "7889f11bf31170b5d092a083b357c8c8130f89e0",
+    "file": "han-serif/Regular.otf",
+    "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/OTF/SimplifiedChinese/SourceHanSerifSC-Regular.otf",
+    "sha256": "78aa7a328fd974df2d688c8a9fd74a33d8334dfa84ab24d9d11efb2ffc464117",
+    "files": [
+      {
+        "file": "han-serif/Regular.otf",
+        "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/OTF/SimplifiedChinese/SourceHanSerifSC-Regular.otf",
+        "sha256": "78aa7a328fd974df2d688c8a9fd74a33d8334dfa84ab24d9d11efb2ffc464117"
+      },
+      {
+        "file": "han-serif/Bold.otf",
+        "download_url": "https://raw.githubusercontent.com/adobe-fonts/source-han-serif/7889f11bf31170b5d092a083b357c8c8130f89e0/OTF/SimplifiedChinese/SourceHanSerifSC-Bold.otf",
+        "sha256": "706b8c0de2deff6cbc0c87e2cdedfd33a78b7ffd76cebb4549012f197ba611fe"
+      }
+    ],
+    "previewFormat": "opentype",
+    "license_sha256": "9ff5bb567e1b92c801fc1069e5fbf992ff8efccacb9db94e5959a5b3ba9bb903",
+    "license_commit": "4356704ff7c68e9a84bf2bd489c9ebe186a9e2ef",
+    "release": "2.003R"
+  },
+  {
+    "family": "LXGW WenKai Screen",
+    "label": "霞鹜文楷屏幕版",
+    "category": "中文 / 正文",
+    "source": "https://github.com/lxgw/LxgwWenKai-Screen",
+    "license": "SIL OFL 1.1",
+    "license_url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai-Screen/34f2c5602eb51d7455a0032c56ea9b0029edab53/OFL.txt",
+    "upstream_commit": "34f2c5602eb51d7455a0032c56ea9b0029edab53",
+    "file": "wenkai-screen/Regular.ttf",
+    "download_url": "https://github.com/lxgw/LxgwWenKai-Screen/releases/download/v1.522/LXGWWenKaiScreen.ttf",
+    "sha256": "cd1a6fa39c4ea42fd8f4e289945789b0e510cf7016435640f8893cdad9b220f3",
+    "files": [
+      {
+        "file": "wenkai-screen/Regular.ttf",
+        "download_url": "https://github.com/lxgw/LxgwWenKai-Screen/releases/download/v1.522/LXGWWenKaiScreen.ttf",
+        "sha256": "cd1a6fa39c4ea42fd8f4e289945789b0e510cf7016435640f8893cdad9b220f3"
+      }
+    ],
+    "previewFormat": "truetype",
+    "license_sha256": "ba38832f9d7e0ad601a1ab90d58f251ba957532885ef80dca050a611962fd8b6",
+    "release": "v1.522"
+  },
+  {
+    "family": "TsangerJinKai02 W04",
+    "label": "仓耳今楷02 W04",
+    "category": "个人阅读 / 正文",
+    "file": "tsanger/TsangerJinKai02-W04.ttf",
+    "source": "https://github.com/Tw93/kami",
+    "personalUse": true,
+    "license": "个人使用；见 LICENSE.txt",
+    "license_file": "tsanger/LICENSE.txt",
+    "license_sha256": "99cc5df88f97deaac124e48568a977a7df5198f08b354a10e7674fe927b09bb4",
+    "sha256": "47a9b416c27ad5436794c880ce3f666a3135a862ed1e2c91aa7db48914a6a487",
+    "download_url": "https://raw.githubusercontent.com/Tw93/kami/934dc5f0602c12b81f4c0e275cd47269296e62fb/assets/fonts/TsangerJinKai02-W04.ttf"
+  },
+  {
+    "family": "TsangerJinKai02 W05",
+    "label": "仓耳今楷02 W05",
+    "category": "个人阅读 / 标题",
+    "file": "tsanger/TsangerJinKai02-W05.ttf",
+    "source": "https://github.com/Tw93/kami",
+    "personalUse": true,
+    "license": "个人使用；见 LICENSE.txt",
+    "license_file": "tsanger/LICENSE.txt",
+    "license_sha256": "99cc5df88f97deaac124e48568a977a7df5198f08b354a10e7674fe927b09bb4",
+    "sha256": "9744dc96801ec8c91a3390bed24c993d4722fb406e1d879177d343d40e985a6e",
+    "download_url": "https://raw.githubusercontent.com/Tw93/kami/934dc5f0602c12b81f4c0e275cd47269296e62fb/assets/fonts/TsangerJinKai02-W05.ttf"
+  }
+]
