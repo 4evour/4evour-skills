@@ -1,9 +1,13 @@
-// 同一组参数用于实际 PDF 纸面与预览；图形全部为矢量。
+// 同一组参数用于实际 PDF 纸面与预览；图片底图不参与正文图片的高图缩放。
 #let blend(paper, accent, amount) = color.mix((paper, 100% - amount * 100%), (accent, amount * 100%))
-#let paper-background(width: 612pt, height: 792pt, style: "plain", strength: 0.22, paper: white, accent: black) = {
+#let paper-background(width: 612pt, height: 792pt, style: "plain", strength: 0.22, paper: white, accent: black, image-path: none, image-opacity: 0.48, image-fit: "cover", image-scope: "all") = context {
   let fine = blend(paper, accent, strength * 0.38)
   let faint = blend(paper, accent, strength * 0.15)
-  if style == "grid" {
+  if image-path != none and (image-scope == "all" or here().page() == 1) {
+    // 底图先铺满页面，再叠加纸色，以免降低正文或图表的不透明度。
+    place(top + left, image(image-path, width: width, height: height, fit: image-fit))
+    place(top + left, rect(width: width, height: height, fill: paper.transparentize(image-opacity * 100%), stroke: none))
+  } else if style == "grid" {
     for x in range(0, int(width / 24pt) + 1) {place(top + left, dx: x * 24pt, line(start: (0pt, 0pt), end: (0pt, height), stroke: 0.35pt + fine))}
     for y in range(0, int(height / 24pt) + 1) {place(top + left, dy: y * 24pt, line(length: width, stroke: 0.35pt + fine))}
   } else if style == "dots" {

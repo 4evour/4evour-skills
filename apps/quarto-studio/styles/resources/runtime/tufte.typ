@@ -438,7 +438,7 @@ CAUTION: if no bibliography is defined, then this function will not display anyt
         },
       )
     },
-    background: if draft {
+    background: if studio.at("image-path", default: none) != none { studio.texture } else if draft {
       rotate(
         45deg,
         text(font: sansfont, size: 200pt, fill: rgb("FFEEEE"))[DRAFT],

@@ -8,6 +8,26 @@ def replace(text, old, new):
     if old not in text: raise ValueError('适配定位失败：'+old[:90])
     return text.replace(old,new)
 
+def image_backgrounds(text):
+    # 只替换页背景表达式；正文组件名为 background 的字段保持原样。
+    start = 0
+    while True:
+        match = re.search(r"background: (place\()", text[start:])
+        if not match:
+            break
+        opening = start + match.end() - 1
+        depth, end = 1, opening + 1
+        while depth:
+            if text[end] == "(": depth += 1
+            elif text[end] == ")": depth -= 1
+            end += 1
+        begin = start + match.start() + len("background: ")
+        original = text[begin:end]
+        replacement = 'if studio.at("image-path", default: none) != none { studio.texture } else { ' + original + ' }'
+        text = text[:begin] + replacement + text[end:]
+        start = begin + len(replacement)
+    return text.replace('background: none', 'background: if studio.at("image-path", default: none) != none { studio.texture } else { none }')
+
 def build():
     entries={}
     for package in UP.iterdir():
@@ -97,6 +117,8 @@ def build():
                         text=text.replace('set text(size: 12pt)','set text(font: studio.body-font, size: studio.fontsize, fill: studio.ink, lang: "zh")')
                         text=text.replace('paper: paper-size,','width: studio.width, height: studio.height, fill: studio.paper,')
                         text=text.replace('margin: (bottom: 1.75cm, top: 2.25cm),','margin: (x: studio.margin-x, y: studio.margin-y),')
+                if is_entry and package.name in ('dashing-dept-news', 'vibrant-color'):
+                    text = image_backgrounds(text)
                 target=OUT/package.name/version.name/file.relative_to(version)
                 target.parent.mkdir(parents=True,exist_ok=True)
                 target.write_text('// Quarto Studio 中文及控制台适配；原始源码、许可见 resources/upstream。\n'+text,encoding='utf-8')
@@ -113,6 +135,7 @@ def build():
     body=body.replace('margin-right: 2.35in', 'margin-right: 110pt')
     body=body.replace('show par: set block(spacing: 0.65em)', 'set par(spacing: 0.65em)')
     body=body.replace('margin-right: 2.35in','margin-right: 110pt').replace('margin-left: 1.35in','margin-left: studio.margin-x')
+    body=body.replace('background: if draft {', 'background: if studio.at("image-path", default: none) != none { studio.texture } else if draft {')
     (OUT/'tufte.typ').write_text(defs+'\n'+body,encoding='utf-8')
     shutil.copyfile(ROOT/'resources/upstream/quarto/tufte/LICENSE', OUT/'tufte.LICENSE')
 

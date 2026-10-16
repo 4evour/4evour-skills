@@ -12,3 +12,5 @@ fonts/**/*.woff*
 **/*.quarto_ipynb
 
 examples/*.typ
+
+/.quarto/

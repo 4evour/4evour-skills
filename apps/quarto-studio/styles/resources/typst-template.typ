@@ -18,7 +18,7 @@
 #let quote-font = "$design-quote-font$"
 #let page-w = $design-page-width$pt
 #let page-h = $design-page-height$pt
-#let texture = paper-background(width: page-w, height: page-h, style: "$design-background$", strength: $design-background-strength$, paper: paper, accent: accent)
+#let texture = paper-background(width: page-w, height: page-h, style: "$design-background$", strength: $design-background-strength$, paper: paper, accent: accent, image-path: $if(design-background-image)$"$design-background-image$"$else$none$endif$, image-opacity: $if(design-background-image-opacity)$$design-background-image-opacity$$else$0.48$endif$, image-fit: "$if(design-background-image-fit)$$design-background-image-fit$$else$cover$endif$", image-scope: "$if(design-background-image-scope)$$design-background-image-scope$$else$all$endif$")
 
 #import "/styles/resource-common.typ": studio-content, studio-sidebar
 $if(studio-dept-news)$
@@ -46,6 +46,7 @@ $endif$
     body-font: body-font, heading-font: heading-font, quote-font: quote-font,
     code-font: "$design-code-font$", code-style: "$design-code-style$", quote-style: "$design-quote-style$",
     paper: paper, ink: ink, accent: accent, panel: panel, muted: muted, divider: divider,
+    texture: texture, image-path: $if(design-background-image)$"$design-background-image$"$else$none$endif$,
     width: page-w, height: page-h, margin-x: $design-margin-x$pt, margin-y: $design-margin-y$pt,
     fontsize: fontsize, heading-size: heading-size, cover-size: cover-size,
     leading: leading, spacing: spacing, cover: cover, toc: toc, header: header, footer: footer,

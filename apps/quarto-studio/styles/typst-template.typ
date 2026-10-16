@@ -19,7 +19,7 @@
 #let quote-font = "$design-quote-font$"
 #let page-w = $design-page-width$pt
 #let page-h = $design-page-height$pt
-#let texture = paper-background(width: page-w, height: page-h, style: "$design-background$", strength: $design-background-strength$, paper: paper, accent: accent)
+#let texture = paper-background(width: page-w, height: page-h, style: "$design-background$", strength: $design-background-strength$, paper: paper, accent: accent, image-path: $if(design-background-image)$"$design-background-image$"$else$none$endif$, image-opacity: $if(design-background-image-opacity)$$design-background-image-opacity$$else$0.48$endif$, image-fit: "$if(design-background-image-fit)$$design-background-image-fit$$else$cover$endif$", image-scope: "$if(design-background-image-scope)$$design-background-image-scope$$else$all$endif$")
 
 #let article(title: none, subtitle: none, author: none, date: none,
   cover: false, toc: false, toc-title: "目录", toc-depth: 2, fontsize: 16.5pt,

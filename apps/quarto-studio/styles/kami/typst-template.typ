@@ -8,6 +8,7 @@
   muted: rgb(content-to-string([$design-muted$])), panel: rgb(content-to-string([$design-panel$])), divider: rgb(content-to-string([$design-divider$])),
   width: $design-page-width$pt, height: $design-page-height$pt,
   margin-x: $design-margin-x$pt, margin-y: $design-margin-y$pt,
+  image-path: $if(design-background-image)$"$design-background-image$"$else$none$endif$, image-opacity: $if(design-background-image-opacity)$$design-background-image-opacity$$else$0.48$endif$, image-fit: "$if(design-background-image-fit)$$design-background-image-fit$$else$cover$endif$", image-scope: "$if(design-background-image-scope)$$design-background-image-scope$$else$all$endif$",
   background: "$design-background$", background-strength: $design-background-strength$, decoration: "$design-decoration$", header: $if(design-header)$true$else$false$endif$,
   footer: $if(design-footer)$true$else$false$endif$,
 )

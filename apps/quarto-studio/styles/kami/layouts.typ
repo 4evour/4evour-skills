@@ -143,7 +143,7 @@
   }
 })
 
-#let texture(c) = paper-background(width: c.width, height: c.height, style: c.background, strength: c.background-strength, paper: c.paper, accent: c.accent)
+#let texture(c) = paper-background(width: c.width, height: c.height, style: c.background, strength: c.background-strength, paper: c.paper, accent: c.accent, image-path: c.at("image-path", default: none), image-opacity: c.at("image-opacity", default: 0.48), image-fit: c.at("image-fit", default: "cover"), image-scope: c.at("image-scope", default: "all"))
 
 #let hero(c, title, subtitle, author, cover: false) = {
   let label = layout-name(c)

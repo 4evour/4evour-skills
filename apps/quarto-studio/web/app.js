@@ -1,8 +1,10 @@
+import {createBackgroundPicker} from './background-picker.mjs';
 import {componentMarkup} from './components.mjs';
 import {AutoPreview, AUTO_PREVIEW_VERSION, restoreAutoPreview} from './auto-preview.mjs';
 
 const $ = id => document.getElementById(id);
 const state = {bootstrap: null, settings: {}, images: [], result: null, revision: 0, busy: false, dirty: true, zoom: 0, saveTimer: null, loading: true, composing: false};
+let backgroundPicker;
 const autoPreview = new AutoPreview({
   render,
   isReady: () => !state.loading && !state.composing && Boolean(state.bootstrap?.tools.quarto) && Boolean($('markdown').value.trim()),
@@ -61,10 +63,11 @@ function syncControls() {
     } else element.value = state.settings[key];
     const output = $(`${key}-value`);
     if (output && element.type === 'range') {
-      const units = {fontSize: ' pt', headingSize: ' pt', coverSize: ' pt', leading: ' em', paragraphSpacing: ' em', marginX: ' in', marginY: ' in', backgroundStrength: '%'};
-      output.textContent = `${Number(key === 'backgroundStrength' ? state.settings[key] * 100 : state.settings[key]).toFixed(['leading','paragraphSpacing','marginX','marginY'].includes(key) ? 2 : 1)}${units[key] || ''}`;
+      const units = {fontSize: ' pt', headingSize: ' pt', coverSize: ' pt', leading: ' em', paragraphSpacing: ' em', marginX: ' in', marginY: ' in', backgroundStrength: '%', backgroundImageOpacity: '%'};
+      output.textContent = `${Number(['backgroundStrength', 'backgroundImageOpacity'].includes(key) ? state.settings[key] * 100 : state.settings[key]).toFixed(['leading','paragraphSpacing','marginX','marginY'].includes(key) ? 2 : 1)}${units[key] || ''}`;
     }
   }
+  backgroundPicker?.sync();
   const selectedTemplate = state.bootstrap.templates.find(item => item.id === state.settings.template);
   $('template-description').textContent = selectedTemplate?.description || '';
   $('component-toolbar').hidden = selectedTemplate?.group !== 'kami';
@@ -90,7 +93,7 @@ function buildSettings() {
   for (const preset of state.bootstrap.paperPresets) {
     const button = document.createElement('button'); button.type = 'button'; button.className = `paper-choice texture-${preset.background}`;
     button.dataset.paperPreset = preset.id; button.style.setProperty('--paper', state.bootstrap.themes[preset.theme].paper); button.style.setProperty('--ink', state.bootstrap.themes[preset.theme].accent); button.textContent = preset.label;
-    button.addEventListener('click', () => {state.settings = {...state.settings, theme: preset.theme, background: preset.background, paperColor: '', textColor: '', accentColor: ''}; syncControls(); dirty();});
+    button.addEventListener('click', () => {state.settings = {...state.settings, theme: preset.theme, background: preset.background, backgroundImage: '', paperColor: '', textColor: '', accentColor: ''}; syncControls(); dirty();});
     $('paper-presets').append(button);
   }
   for (const template of state.bootstrap.templates.filter(item => item.group === 'kami')) {
@@ -240,13 +243,23 @@ async function init() {
   try {
     state.bootstrap = await jsonResponse(await fetch('/api/bootstrap'));
     buildSettings();
+    backgroundPicker = createBackgroundPicker({entries: state.bootstrap.backgrounds || [], getSettings: () => state.settings, onSelect: id => {state.settings.backgroundImage = id; syncControls(); dirty();}, toast});
     let saved; try {saved = await readDraft();} catch {}
     state.settings = {...state.bootstrap.defaults, ...(saved?.settings || {})};
+    const preset = new URLSearchParams(location.search);
+    const paper = preset.get('background');
+    if (state.bootstrap.backgrounds?.some(entry => entry.id === paper)) {
+      state.settings.backgroundImage = paper;
+      const opacity = Number(preset.get('opacity'));
+      if (preset.has('opacity') && Number.isFinite(opacity) && opacity >= 0 && opacity <= 1) state.settings.backgroundImageOpacity = opacity;
+      history.replaceState(null, '', location.pathname + location.hash);
+    }
     $('markdown').value = saved?.markdown ?? state.bootstrap.examples[1].markdown;
     for (const key of ['title','subtitle','author']) $(key).value = saved?.[key] || '';
     state.images = saved?.images || []; $('auto-render').checked = restoreAutoPreview(saved);
     $('word-count').textContent = `${$('markdown').value.length.toLocaleString()} 字符`;
     syncControls(); renderImages();
+    if (location.hash === '#backgrounds') {setTab('design'); $('reading-backgrounds').scrollIntoView({block: 'start'});}
     const tools = state.bootstrap.tools;
     $('engine-ready').textContent = tools.quarto ? 'Quarto 已就绪' : '需要安装 Quarto';
     if (!tools.quarto) notice('未找到 Quarto。安装并加入 PATH 后，重新启动控制台即可生成 PDF。', true);

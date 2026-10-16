@@ -31,11 +31,11 @@
   set page(
     width: studio.width, height: studio.height,
     fill: studio.paper, margin: (x: studio.margin-x, y: studio.margin-y),
-    background: place(right + top, rect(
+    background: if studio.at("image-path", default: none) != none { studio.texture } else { place(right + top, rect(
       fill: studio.accent,
       height: 100%,
       width: (studio.width * 0.32),
-    ))
+    )) }
   )
 
   // Set the body font.

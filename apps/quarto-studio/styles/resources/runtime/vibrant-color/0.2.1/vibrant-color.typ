@@ -220,11 +220,11 @@
       right: 1.12cm,
     ),
     // Background
-    background: place(
+    background: if studio.at("image-path", default: none) != none { studio.texture } else { place(
       dx: 0cm,
       dy: 0cm,
       image("/resources/upstream/typst/vibrant-color/0.2.1/assets/" + theme + "/" + theme + "-summary.png"),
-    ),
+    ) },
   )
 
   // Header "SOMMAIRE" at the top
@@ -358,11 +358,11 @@
       left: studio.margin-x + 16pt, right: studio.margin-x,
     ),
     // Side bar
-    background: place(
+    background: if studio.at("image-path", default: none) != none { studio.texture } else { place(
       dx: 0cm,
       dy: 0cm,
       image("/resources/upstream/typst/vibrant-color/0.2.1/assets/" + theme + "/" + theme + "-side.png"),
-    ),
+    ) },
   )
 
   // Returns the author if there is only one, returns sub-authors otherwise
@@ -505,7 +505,7 @@
   if studio.cover {
   pagebreak()
 
-  set page(margin: 0cm, background: none, header: none, footer: none)
+  set page(margin: 0cm, background: if studio.at("image-path", default: none) != none { studio.texture } else { none }, header: none, footer: none)
 
   // Image
   place(right, image("/resources/upstream/typst/vibrant-color/0.2.1/assets/" + theme + "/" + theme + "-back.png"))

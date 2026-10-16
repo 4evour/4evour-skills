@@ -50,6 +50,7 @@ PAPER_PRESETS = [
 BACKGROUNDS = ("plain", "dots", "grid", "ruled", "linen", "wash", "frame")
 DEFAULTS = {
     "backgroundStrength": 0.22, "decoration": "minimal",
+    "backgroundImage": "", "backgroundImageOpacity": 0.48, "backgroundImageFit": "cover", "backgroundImageScope": "all",
     "vibrantPalette": "pastel-theme", "template": "default", "codeFont": "JetBrains Mono", "codeStyle": "codly", "quoteStyle": "showybox",
     "theme": "magazine", "paper": "letter", "bodyFont": "Noto Sans SC",
     "headingFont": "Microsoft YaHei", "quoteFont": "KaiTi", "fontSize": 16.5,
@@ -73,6 +74,10 @@ FONT_CACHE: list[dict] | None = None
 spec = importlib.util.spec_from_file_location("quarto_markdown", ROOT / "scripts/convert-markdown.py")
 converter = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(converter)
+background_spec = importlib.util.spec_from_file_location("background_library", ROOT / "scripts/background-library.py")
+background_module = importlib.util.module_from_spec(background_spec)
+background_spec.loader.exec_module(background_module)
+BACKGROUND_LIBRARY = background_module.BackgroundLibrary(ROOT / "output/backgrounds")
 
 
 def find_tool(name: str) -> str | None:
@@ -126,7 +131,7 @@ def validate_settings(settings: dict) -> dict:
     for key in ("bodyFont", "headingFont", "quoteFont", "codeFont"):
         if result[key] not in ALLOWED_FONTS:
             raise ValueError("请选择字体库中的字体。")
-    for key, low, high in (("backgroundStrength", 0, 0.6), ("fontSize", 10, 24), ("headingSize", 20, 42), ("coverSize", 28, 60),
+    for key, low, high in (("backgroundImageOpacity", 0, 1), ("backgroundStrength", 0, 0.6), ("fontSize", 10, 24), ("headingSize", 20, 42), ("coverSize", 28, 60),
                             ("leading", 0.25, 1.2), ("paragraphSpacing", 0.2, 1.8), ("marginX", 0.35, 1.5), ("marginY", 0.35, 1.5)):
         result[key] = number(result[key], low, high, key)
     for key in ("cover", "toc", "header", "footer"):
@@ -135,10 +140,17 @@ def validate_settings(settings: dict) -> dict:
     for key in ("accentColor", "paperColor", "textColor"):
         if not isinstance(result[key], str) or result[key] and not re.fullmatch(r"#[0-9A-Fa-f]{6}", result[key]):
             raise ValueError("颜色必须使用 #RRGGBB。")
+    for key, choices in (("backgroundImageFit", ("cover", "contain", "stretch")), ("backgroundImageScope", ("all", "first"))):
+        if result[key] not in choices:
+            raise ValueError("底图适配或使用范围不正确。")
+    if not isinstance(result["backgroundImage"], str):
+        raise ValueError("底图编号不正确。")
+    if result["backgroundImage"]:
+        BACKGROUND_LIBRARY.get(result["backgroundImage"])
     return result
 
 
-def metadata(settings: dict, title: str, subtitle: str, author: str) -> dict:
+def metadata(settings: dict, title: str, subtitle: str, author: str, background_path: str = "") -> dict:
     palette = dict(THEMES[settings["theme"]])
     for key, setting in (("paper", "paperColor"), ("ink", "textColor"), ("accent", "accentColor")):
         if settings[setting]:
@@ -152,6 +164,8 @@ def metadata(settings: dict, title: str, subtitle: str, author: str) -> dict:
               "design-page-width": width, "design-page-height": height,
               "design-margin-x": settings["marginX"] * 72, "design-margin-y": settings["marginY"] * 72,
               "design-background": settings["background"], "design-background-strength": settings["backgroundStrength"], "design-decoration": settings["decoration"], "design-header": settings["header"], "design-footer": settings["footer"]}
+    result.update({"design-background-image": background_path, "design-background-image-opacity": settings["backgroundImageOpacity"],
+                   "design-background-image-fit": settings["backgroundImageFit"], "design-background-image-scope": settings["backgroundImageScope"]})
     result.update({"design-vibrant-theme": settings["vibrantPalette"], "design-code-font": settings["codeFont"], "design-code-style": settings["codeStyle"], "design-quote-style": settings["quoteStyle"]})
     result["filters"] = [str(ROOT / "scripts/resource-blocks.lua")]
     if settings["codeStyle"] == "codly":
@@ -266,7 +280,14 @@ def execute_job(identifier: str, payload: dict, settings: dict) -> None:
             image_paths = decode_images(payload.get("images", []), directory / "assets")
             converted, mermaid_count = rewrite_source(source, image_paths)
             (directory / "article.qmd").write_text(converted, encoding="utf-8", newline="")
-            options = metadata(settings, payload["title"], payload.get("subtitle", ""), payload.get("author", ""))
+            background_path = ""
+            if settings["backgroundImage"]:
+                background = BACKGROUND_LIBRARY.path(settings["backgroundImage"])
+                target = directory / "assets" / ("background" + background.suffix)
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(background, target)
+                background_path = "/" + target.relative_to(ROOT).as_posix()
+            options = metadata(settings, payload["title"], payload.get("subtitle", ""), payload.get("author", ""), background_path)
             (directory / "metadata.json").write_text(json.dumps(options, ensure_ascii=False, indent=2), encoding="utf-8")
             (directory / "settings.json").write_text(json.dumps({"title": payload["title"], "subtitle": payload.get("subtitle", ""), "author": payload.get("author", ""), "settings": settings}, ensure_ascii=False, indent=2), encoding="utf-8")
             command = find_tool("quarto")
@@ -385,7 +406,7 @@ def bootstrap() -> dict:
         if defaults[field] not in available and available:
             defaults[field] = "Noto Serif SC" if "Noto Serif SC" in available else sorted(available)[0]
     return {"app": "Quarto Studio", "engine": "Quarto + Typst", "defaults": defaults, "themes": THEMES,
-            "paperPresets": PAPER_PRESETS, "fonts": font_entries, "templates": TEMPLATES, "tools": {name: bool(find_tool(name)) for name in ("quarto", "pdftoppm", "pdfinfo")},
+            "paperPresets": PAPER_PRESETS, "backgrounds": BACKGROUND_LIBRARY.list(), "fonts": font_entries, "templates": TEMPLATES, "tools": {name: bool(find_tool(name)) for name in ("quarto", "pdftoppm", "pdfinfo")},
             "examples": [{"id": "comparison", "name": "与 MD2Card 同稿对比", "markdown": (ROOT / "examples/同稿对比.md").read_text(encoding="utf-8-sig")},
                          {"id": "article", "name": "长文、表格与流程图", "markdown": (ROOT / "examples/长文排版验收.md").read_text(encoding="utf-8-sig")},
                          {"id": "kami", "name": "Kami 三套版式示例", "markdown": (ROOT / "examples/Kami版式示例.md").read_text(encoding="utf-8-sig")},
@@ -397,7 +418,7 @@ class Handler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(WEB), **kwargs)
 
     def end_headers(self):
-        if urlparse(self.path).path in ("/app", "/app/", "/app.js", "/auto-preview.mjs", "/components.mjs", "/style.css"):
+        if urlparse(self.path).path in ("/app", "/app/", "/app.js", "/auto-preview.mjs", "/components.mjs", "/background-picker.mjs", "/style.css"):
             self.send_header("Cache-Control", "no-store")
         super().end_headers()
 
@@ -437,6 +458,13 @@ class Handler(SimpleHTTPRequestHandler):
                 return self.send_json({"ok": True, "app": "Quarto Studio", "engine": "Quarto + Typst", "root": str(ROOT)})
             if path == "/api/bootstrap":
                 return self.send_json(bootstrap())
+            if path == "/api/backgrounds":
+                return self.send_json(BACKGROUND_LIBRARY.list())
+            if path.startswith("/backgrounds/"):
+                match = re.fullmatch(r"/backgrounds/([0-9a-f]{24})/(image|thumbnail)", path)
+                if not match:
+                    return self.send_error(404)
+                return self.send_file(BACKGROUND_LIBRARY.path(match[1], thumbnail=match[2] == "thumbnail"))
             if path.startswith("/api/jobs/"):
                 state = task_state(job_id(path.removeprefix("/api/jobs/")))
                 return self.send_json(state) if state else self.send_error(404)
@@ -463,7 +491,7 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_json({"error": str(error)}, 500)
 
     def do_POST(self):
-        if self.path != "/api/render":
+        if self.path not in ("/api/render", "/api/backgrounds"):
             return self.send_json({"error": "接口不存在。"}, 404)
         if self.headers.get("Sec-Fetch-Site") == "cross-site":
             return self.send_json({"error": "请从本地控制台发起请求。"}, 403)
@@ -472,6 +500,8 @@ class Handler(SimpleHTTPRequestHandler):
             if not 0 < length <= 30_000_000:
                 raise ValueError("请求为空或超过 30 MB。")
             payload = json.loads(self.rfile.read(length))
+            if self.path == "/api/backgrounds":
+                return self.send_json(BACKGROUND_LIBRARY.store(payload), 201)
             state, cached = submit(payload)
             return self.send_json({**state, "cached": cached}, 200 if state["status"] == "succeeded" else 202)
         except (ValueError, TypeError) as error:
