@@ -175,3 +175,7 @@ MD2Card 前端当前有 24 项测试，覆盖 Markdown 解析、图片绑定、�
 - **baoyu-xhs-images**：保留 [MIT License](baoyu-xhs-images/LICENSE)。
 - **guizang-social-card-skill**：保留 [AGPL-3.0 License](guizang-social-card-skill/LICENSE) 和 [商业授权说明](guizang-social-card-skill/COMMERCIAL_LICENSING.md)。
 - 其余内容 Skills 继续遵循各自已有声明；不将不同来源视为一套统一许可证。
+
+## 仓库维护
+
+提交前运行 `./scripts/setup-git-identity.ps1`，固定本仓库身份并开启提交、推送校验。配置说明及验证方法见 [Git 提交身份](docs/git-identity.md)。

@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+
+fail() {
+    printf '%s\n' "$*" >&2
+    exit 1
+}
+expected_name=$(git config --local --get identity.name) || fail '未设置仓库身份，请先运行 scripts/setup-git-identity.ps1。'
+expected_email=$(git config --local --get identity.email) || fail '未设置仓库邮箱，请先运行 scripts/setup-git-identity.ps1。'
+[ -n "$expected_name" ] && [ -n "$expected_email" ] || fail '仓库身份不能为空。'
+expected="$expected_name <$expected_email>"
+
+check() {
+    [ "$2" = "$expected" ] || fail "$1 身份不匹配：$2；本仓库要求：$expected。请修正配置或环境变量后重试。"
+}
+
+if [ "${1:-current}" = current ]; then
+    author=$(git var GIT_AUTHOR_IDENT) || exit 1
+    committer=$(git var GIT_COMMITTER_IDENT) || exit 1
+    check '作者' "${author%>*}>"
+    check '提交者' "${committer%>*}>"
+else
+    author=$(git show -s --format='%an <%ae>' "$1") || exit 1
+    committer=$(git show -s --format='%cn <%ce>' "$1") || exit 1
+    check "提交 $1 的作者" "$author"
+    check "提交 $1 的提交者" "$committer"
+fi
